@@ -17,7 +17,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase',
             'dob'           => '10/15/1993',
         );
-        $response = $this->call('POST', '/register', $input);
+        $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHas('success');
     }
@@ -31,7 +31,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase',
             'dob'           => '10/15/1993',
         );
-        $response = $this->call('POST', '/register', $input);
+        $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHasErrors();
     }
@@ -46,7 +46,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase',
             'dob'           => '10/15/1993',
         );
-        $response = $this->call('POST', '/register', $input);
+        $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHasErrors(array('first_name'));
     }
@@ -61,7 +61,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase',
             'dob'           => '10/15/1993',
         );
-        $response = $this->call('POST', '/register', $input);
+        $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHasErrors(array('last_name'));
     }
@@ -76,7 +76,7 @@ class UserTest extends TestCase {
             'password'      => 'test',
             'dob'           => '10/15/1993',
         );
-        $response = $this->call('POST', '/register', $input);
+        $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHasErrors(array('password'));
     }
@@ -91,8 +91,32 @@ class UserTest extends TestCase {
             'password'      => 'testcase',
             'dob'           => '',
         );
-        $response = $this->call('POST', '/register', $input);
+        $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHasErrors(array('dob'));
+    }
+
+    public function testLoginTrue()
+    {
+        // we need to call this test case again to create the user
+        // for the login test.
+        $this->testCreateUserTrue();
+        $input = array(
+            'username'  => 'kyle',
+            'password'  => 'testcase',
+        );
+        $response = $this->call('POST', '/login', $input);
+        $this->assertRedirectedTo('dashboard');
+    }
+
+    public function testLoginFalse()
+    {
+        $input = array(
+            'username'  => 'kyle',
+            'password'  => 'badpassword',
+        );
+        $this->call('POST', '/login', $input);
+        $this->assertSessionHasErrors();
+        $this->assertRedirectedTo('login');
     }
 }
