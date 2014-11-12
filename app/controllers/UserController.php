@@ -40,6 +40,12 @@ class UserController extends BaseController {
 
     }
 
+    /**
+     * Try to log the user in with the post data provided.  If the authentication fails
+     * return the user to the login page with the errors.  Otherwise return them to where
+     * they were originally trying to go or the dashboard.
+     * @return mixed
+     */
     public function postLogin()
     {
         if (Auth::attempt(array(
