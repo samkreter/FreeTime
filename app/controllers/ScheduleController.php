@@ -1,6 +1,7 @@
 <?php
 
-class ScheduleController extends BaseController {
+class ScheduleController extends BaseController
+{
 
     /**
      * Create the schedule for a user.  The schedule needs to have a date associated with it,
