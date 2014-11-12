@@ -11,8 +11,7 @@ class CreateSchedulesTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->integer('user_id');
-			$table->integer('day_id');
-            $table->date('day');
+            $table->date('date');
 		});
 	}
 

@@ -4,6 +4,7 @@ class Schedule extends Eloquent {
 
 	protected $table = 'schedules';
 	public $timestamps = true;
+    protected $fillable = array('date');
 
     /**
      * Get the day that the particular schedule belongs to
