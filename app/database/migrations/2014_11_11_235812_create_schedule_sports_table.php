@@ -3,20 +3,21 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateScheduleSportsTable extends Migration {
+class CreateScheduleSportsTable extends Migration
+{
 
-	public function up()
-	{
-		Schema::create('schedule_sports', function(Blueprint $table) {
-			$table->increments('id');
-			$table->timestamps();
-			$table->integer('schedule_id');
-			$table->integer('sport_id');
-		});
-	}
+    public function up()
+    {
+        Schema::create('schedule_sports', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->integer('schedule_id');
+            $table->integer('sport_id');
+        });
+    }
 
-	public function down()
-	{
-		Schema::drop('schedule_sports');
-	}
+    public function down()
+    {
+        Schema::drop('schedule_sports');
+    }
 }

@@ -1,8 +1,9 @@
 <?php
 
-class Sport extends Eloquent {
+class Sport extends Eloquent
+{
 
-	protected $table = 'sports';
-	public $timestamps = true;
+    protected $table = 'sports';
+    public $timestamps = true;
 
 }

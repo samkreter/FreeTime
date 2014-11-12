@@ -1,8 +1,9 @@
 <?php
 
-class Activity extends Eloquent {
+class Activity extends Eloquent
+{
 
-	protected $table = 'activities';
-	public $timestamps = true;
+    protected $table = 'activities';
+    public $timestamps = true;
 
 }

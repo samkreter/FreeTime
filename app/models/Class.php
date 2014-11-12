@@ -1,8 +1,9 @@
 <?php
 
-class Class extends Eloquent {
+class Class extends Eloquent
+{
 
-	protected $table = 'classes';
-	public $timestamps = true;
+    protected $table = 'classes';
+    public $timestamps = true;
 
 }

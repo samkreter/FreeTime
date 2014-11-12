@@ -1,9 +1,9 @@
 <?php
 
-class Schedule extends Eloquent {
-
-	protected $table = 'schedules';
-	public $timestamps = true;
+class Schedule extends Eloquent
+{
+    protected $table = 'schedules';
+    public $timestamps = true;
     protected $fillable = array('date');
 
     /**
@@ -11,18 +11,18 @@ class Schedule extends Eloquent {
      * @return mixed
      */
     public function day()
-	{
-		return $this->hasOne('Day');
-	}
+    {
+        return $this->hasOne('Day');
+    }
 
     /**
      * Get the user that the schedule is associated with
      * @return mixed
      */
     public function user()
-	{
-		return $this->belongsTo('\User');
-	}
+    {
+        return $this->belongsTo('\User');
+    }
 
     /**
      * Get all the activities for the current day
