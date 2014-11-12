@@ -4,7 +4,7 @@ class UserController extends BaseController {
 
     public function getRegister()
     {
-
+        return View::make('users.register');
     }
 
     /**
@@ -37,7 +37,7 @@ class UserController extends BaseController {
 
     public function getLogin()
     {
-
+        return View::make('users.login');
     }
 
     /**
