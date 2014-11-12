@@ -2,6 +2,11 @@
 
 class UserController extends BaseController {
 
+    public function getRegister()
+    {
+
+    }
+
     /**
      * Method for saving a user.  Check the POST data against the rules
      * and then use Laravel's built in validator to validate the data.  If
@@ -30,8 +35,18 @@ class UserController extends BaseController {
             ->withInput(Input::except('password'));
     }
 
-    public function getRegister()
+    public function getLogin()
     {
 
+    }
+
+    public function postLogin()
+    {
+        if (Auth::attempt(array(
+            'username' => Input::get('username'),
+            'password' => Input::get('password')))) {
+            return Redirect::intended('dashboard');
+        }
+        return Redirect::to('/login')->with('errors', 'Invalid username/password combination!');
     }
 }
