@@ -1,6 +1,6 @@
 <?php
 
-class Class extends Eloquent
+class ClassM extends Eloquent
 {
 
     protected $table = 'classes';
