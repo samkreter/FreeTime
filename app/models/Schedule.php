@@ -4,7 +4,7 @@ class Schedule extends Eloquent
 {
     protected $table = 'schedules';
     public $timestamps = true;
-    protected $fillable = array('date');
+    protected $fillable = array('date', 'user_id');
 
     /**
      * Get the day that the particular schedule belongs to
@@ -21,7 +21,7 @@ class Schedule extends Eloquent
      */
     public function user()
     {
-        return $this->belongsTo('\User');
+        return $this->belongsTo('User');
     }
 
     /**
@@ -48,6 +48,6 @@ class Schedule extends Eloquent
      */
     public function classes()
     {
-        return $this->belongsToMany('Class', 'schedule_classes');
+        return $this->belongsToMany('ClassM', 'schedule_classes');
     }
 }

@@ -10,7 +10,6 @@ class CreateScheduleClassesTable extends Migration
     {
         Schema::create('schedule_classes', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->integer('schedule_id');
             $table->integer('class_id');
         });

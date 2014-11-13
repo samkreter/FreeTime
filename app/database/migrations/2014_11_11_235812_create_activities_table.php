@@ -15,7 +15,7 @@ class CreateActivitiesTable extends Migration
             $table->smallInteger('max_players');
             $table->string('name', 255);
             $table->time('start');
-            $table->date('end');
+            $table->time('end');
         });
     }
 

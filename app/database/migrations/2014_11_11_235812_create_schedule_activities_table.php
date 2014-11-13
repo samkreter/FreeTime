@@ -10,7 +10,6 @@ class CreateScheduleActivitiesTable extends Migration
     {
         Schema::create('schedule_activities', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->integer('schedule_id');
             $table->integer('activity_id');
         });

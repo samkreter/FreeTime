@@ -15,10 +15,23 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
  */
 Route::group(array('before' => 'auth'), function()
 {
-    // view schedules
+    // schedules
     Route::get('/schedules/view/{id}', array('uses' => 'ScheduleController@getView'));
-
-    // create a schedule
     Route::post('/schedules/new', array('uses' => 'ScheduleController@postCreate'));
 
+    // activities
+    Route::get('/schedules/activities/new', array('uses' => 'ActivityController@getCreate'));
+    Route::post('/schedules/activities/new', array('uses' => 'ActivityController@postCreate'));
+    Route::post('/schedules/{scheduleId}/activities/{activityId}/add',
+        array('uses' => 'ActivityController@postAdd'));
+
+    // classes
+    Route::post('/schedules/classes/new', array('uses' => 'ClassController@postCreate'));
+    Route::post('/schedules/{scheduleId}/classes/{classId}/add',
+        array('uses' => 'ClassController@postAdd'));
+
+    // sports
+    Route::post('/schedules/sports/new', array('uses' => 'SportController@postCreate'));
+    Route::post('/schedules/{scheduleId}/sports/{sportId}/add',
+        array('uses' => 'SportController@postAdd'));
 });
