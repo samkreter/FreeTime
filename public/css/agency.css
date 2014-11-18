@@ -860,3 +860,12 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+#right-line-solid{
+  border-right: thick solid #ff0000;
+}
+
+#login-button{
+  position: relative;
+  top: 50px;
+}
