@@ -36,4 +36,15 @@ class ClassController extends BaseController
         $schedule->classes()->attach($class);
         return Redirect::to('schedules')->with('success', 'Class added to your schedule.');
     }
+
+    public function getRemove($scheduleId, $classId)
+    {
+        $schedule = Schedule::findOrFail($scheduleId);
+        if ($schedule->user_id !== Auth::user()->id) {
+            App::abort(403);
+        }
+        $class = ClassM::findOrFail($classId);
+        $schedule->classes()->detach($class);
+        return Redirect::to('schedules')->with('success', 'Class removed from your schedule');
+    }
 }

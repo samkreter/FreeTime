@@ -37,4 +37,15 @@ class SportController extends BaseController
         $schedule->sports()->attach($sport);
         return Redirect::to('schedules')->with('success', 'Sport added to your schedule.');
     }
+
+    public function getRemove($scheduleId, $sportId)
+    {
+        $schedule = Schedule::findOrFail($scheduleId);
+        if ($schedule->user_id !== Auth::user()->id) {
+            App::abort(403);
+        }
+        $sport = Sport::findOrFail($sportId);
+        $schedule->sports()->detach($sport);
+        return Redirect::to('schedules')->with('success', 'Sport removed from your schedule');
+    }
 }
