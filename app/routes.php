@@ -26,11 +26,13 @@ Route::group(array('before' => 'auth'), function()
         array('uses' => 'ActivityController@postAdd'));
 
     // classes
+    Route::get('/schedules/classes/new', array('uses' => 'ClassController@getCreate'));
     Route::post('/schedules/classes/new', array('uses' => 'ClassController@postCreate'));
     Route::post('/schedules/{scheduleId}/classes/{classId}/add',
         array('uses' => 'ClassController@postAdd'));
 
     // sports
+    Route::get('/schedules/sports/new', array('uses' => 'SportController@getCreate'));
     Route::post('/schedules/sports/new', array('uses' => 'SportController@postCreate'));
     Route::post('/schedules/{scheduleId}/sports/{sportId}/add',
         array('uses' => 'SportController@postAdd'));
