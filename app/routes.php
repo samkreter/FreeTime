@@ -16,6 +16,7 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
 Route::group(array('before' => 'auth'), function()
 {
     // schedules
+    Route::get('/schedules/all', array('uses' => 'ScheduleController@getAll'));
     Route::get('/schedules/view/{id}', array('uses' => 'ScheduleController@getView'));
     Route::post('/schedules/new', array('uses' => 'ScheduleController@postCreate'));
 

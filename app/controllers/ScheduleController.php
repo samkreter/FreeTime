@@ -2,6 +2,15 @@
 
 class ScheduleController extends BaseController
 {
+    /**
+     * Get all of the schedules for the logged in user.
+     * @return mixed
+     */
+    public function getAll()
+    {
+        $schedules = Schedules::where('user_id', '=', Auth::user()->id)->get();
+        return View::make('schedules.index')->with('schedules', $schedules);
+    }
 
     /**
      * Create the schedule for a user.  The schedule needs to have a date associated with it,
