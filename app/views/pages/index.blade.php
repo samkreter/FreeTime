@@ -166,7 +166,7 @@
                     <div class="col-lg-2">
                         <div class="team-member">
                             <img src="img/kyle.jpg" class="img-responsive img-circle" alt="">
-                            <h4>Kyle McCarthyr</h4>
+                            <h4>Kyle McCarthy</h4>
                             <p class="text-muted">Back-end Developer</p>
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
