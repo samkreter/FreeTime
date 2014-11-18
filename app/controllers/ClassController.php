@@ -11,8 +11,8 @@ class ClassController extends BaseController
     {
         $input = Input::all();
         $rules = array(
-            'professor'     => 'required|max:255',
-            'name'          => 'required|max:255',
+            'instructor'    => 'required|max:255',
+            'title'         => 'required|max:255',
             'start'         => 'required',
             'end'           => 'required'
         );

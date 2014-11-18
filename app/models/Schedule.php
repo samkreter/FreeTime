@@ -39,7 +39,7 @@ class Schedule extends Eloquent
      */
     public function sports()
     {
-        return $this->belongsToMany('Sports', 'schedule_sports');
+        return $this->belongsToMany('Sport', 'schedule_sports');
     }
 
     /**
@@ -48,6 +48,6 @@ class Schedule extends Eloquent
      */
     public function classes()
     {
-        return $this->belongsToMany('ClassM', 'schedule_classes');
+        return $this->belongsToMany('ClassM', 'schedule_classes', 'schedule_id', 'class_id');
     }
 }
