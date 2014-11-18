@@ -1,6 +1,7 @@
 <?php
 
-Route::get('/', array('uses' => 'HomeController@getHome'));
+Route::get('/', array('uses' => 'HomeController@getIndex'));
+Route::get('/home',array('uses' => 'HomeController@getHome'));
 
 // registration
 Route::get('register', array('uses' => 'UserController@getRegister'));

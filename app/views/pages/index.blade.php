@@ -152,7 +152,7 @@
                         <div class="team-member">
                             <img src="img/Jayme.jpg" class="img-responsive img-circle" alt="">
                             <h4>Jayme Becker</h4>
-                            <p class="text-muted">Lead Designer</p>
+                            <p class="text-muted">Designer</p>
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
                                 </li>
@@ -167,7 +167,7 @@
                         <div class="team-member">
                             <img src="img/kyle.jpg" class="img-responsive img-circle" alt="">
                             <h4>Kyle McCarthyr</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <p class="text-muted">Back-end Developer</p>
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
                                 </li>
@@ -182,7 +182,7 @@
                         <div class="team-member">
                             <img src="img/SamKreter.jpg" class="img-responsive img-circle" alt="">
                             <h4>Sam Kreter</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <p class="text-muted">Project Developer</p>
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
                                 </li>
@@ -197,7 +197,7 @@
                         <div class="team-member">
                             <img src="img/adam.jpg" class="img-responsive img-circle" alt="">
                             <h4>Adam Speichinger</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <p class="text-muted">API Developer</p>
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
                                 </li>
@@ -212,7 +212,7 @@
                         <div class="team-member">
                             <img src="img/Shannon.jpg" class="img-responsive img-circle" alt="">
                             <h4>Shannon Hall</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <p class="text-muted">API Developer</p>
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
                                 </li>
@@ -248,11 +248,11 @@
                                 <div id="right-line-solid" class="col-md-6">
                                   <form name="sent-login-info" id="loginForm" novalidate>
                                       <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your name.">
+                                          <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="form-group">
-                                          <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your email address.">
+                                          <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="col-lg-12 text-center">
@@ -264,15 +264,15 @@
                                 <div class="col-md-6">
                                   <form name="sent-register-info" id="registerForm" novalidate>
                                       <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Username *" id="register-username" required data-validation-required-message="Please enter your name.">
+                                          <input type="text" class="form-control" placeholder="Username *" id="register-username" required data-validation-required-message="Please enter your Username.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="form-group">
-                                          <input type="password" class="form-control" placeholder="Enter Password *" id="register-pass" required data-validation-required-message="Please enter your email address.">
+                                          <input type="password" class="form-control" placeholder="Enter Password *" id="register-pass" required data-validation-required-message="Please enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="form-group">
-                                          <input type="password" class="form-control" placeholder="Re-Enter Password *" id="re-pass" required data-validation-required-message="Please enter your phone number.">
+                                          <input type="password" class="form-control" placeholder="Re-Enter Password *" id="re-pass" required data-validation-required-message="Please re-enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="col-lg-12 text-center">
