@@ -32,10 +32,7 @@
 
 </head>
 
-
-
-
-<body id="page-top" class="index">
+<body>
 
     <div id="wrapper">
 
@@ -49,23 +46,16 @@
     </div>
     <!-- /#wrapper -->
 
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"></script>
 
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="js/classie.js"></script>
-  <script src="js/cbpAnimatedHeader.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-
-  <!-- Custom Theme JavaScript -->
-  <script src="js/agency.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="/js/plugins/morris/raphael.min.js"></script>
+    <script src="/js/plugins/morris/morris.min.js"></script>
+    <script src="/js/plugins/morris/morris-data.js"></script>
 
 </body>
 

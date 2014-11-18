@@ -49,7 +49,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To FreeTime</div>
+                <div class="intro-lead-in">Welcome To FreeTim</div>
                 <div class="intro-heading">It's Nice To Meet You</div>
                 <a href="#portfolioModal2" class="portfolio-link btn btn-xl" data-toggle="modal">Tell Me More</a>
 
