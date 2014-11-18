@@ -14,7 +14,7 @@ class CreateSportsTable extends Migration
             $table->smallInteger('min_players');
             $table->smallInteger('max_players');
             $table->string('name', 255);
-            $table->date('start');
+            $table->time('start');
             $table->time('end');
         });
     }
