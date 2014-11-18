@@ -7,6 +7,10 @@ class SportController extends BaseController
 
     }
 
+    /**
+     * Try to create a new sport if the POST data is valid.
+     * @return mixed
+     */
     public function postCreate()
     {
         $input = Input::all();
@@ -27,6 +31,12 @@ class SportController extends BaseController
         return Redirect::to('schedules/sports/new')->withErrors($validator)->withInput($input);
     }
 
+    /**
+     * Try to add a sport to a schedule.  The owners must match.
+     * @param $scheduleId
+     * @param $sportId
+     * @return mixed
+     */
     public function postAdd($scheduleId, $sportId)
     {
         $schedule = Schedule::findOrFail($scheduleId);
@@ -38,6 +48,12 @@ class SportController extends BaseController
         return Redirect::to('schedules')->with('success', 'Sport added to your schedule.');
     }
 
+    /**
+     * Try to remove a sport from a schedule.  The owners must match.
+     * @param $scheduleId
+     * @param $sportId
+     * @return mixed
+     */
     public function getRemove($scheduleId, $sportId)
     {
         $schedule = Schedule::findOrFail($scheduleId);

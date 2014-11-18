@@ -7,6 +7,10 @@ class ActivityController extends BaseController
 
     }
 
+    /**
+     * Try to create a new activity if the POST data is valid.
+     * @return mixed
+     */
     public function postCreate()
     {
         $input = Input::all();
@@ -27,6 +31,12 @@ class ActivityController extends BaseController
         return Redirect::to('schedules/activities/new')->withErrors($validator)->withInput($input);
     }
 
+    /**
+     * Try to add an activity to the schedule.  The owners must match.
+     * @param $scheduleId
+     * @param $activityId
+     * @return mixed
+     */
     public function postAdd($scheduleId, $activityId)
     {
         $schedule = Schedule::findOrFail($scheduleId);
@@ -38,6 +48,12 @@ class ActivityController extends BaseController
         return Redirect::to('schedules')->with('success', 'Activity added to your schedule.');
     }
 
+    /**
+     * Try to remove an activity from a schedule.  The owners must match.
+     * @param $scheduleId
+     * @param $activityId
+     * @return mixed
+     */
     public function getRemove($scheduleId, $activityId)
     {
         $schedule = Schedule::findOrFail($scheduleId);
