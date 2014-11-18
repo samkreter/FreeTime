@@ -1,27 +1,28 @@
 <?php
 
-class Schedule extends Eloquent {
-
-	protected $table = 'schedules';
-	public $timestamps = true;
+class Schedule extends Eloquent
+{
+    protected $table = 'schedules';
+    public $timestamps = true;
+    protected $fillable = array('date', 'user_id');
 
     /**
      * Get the day that the particular schedule belongs to
      * @return mixed
      */
     public function day()
-	{
-		return $this->hasOne('Day');
-	}
+    {
+        return $this->hasOne('Day');
+    }
 
     /**
      * Get the user that the schedule is associated with
      * @return mixed
      */
     public function user()
-	{
-		return $this->belongsTo('\User');
-	}
+    {
+        return $this->belongsTo('User');
+    }
 
     /**
      * Get all the activities for the current day
@@ -47,6 +48,6 @@ class Schedule extends Eloquent {
      */
     public function classes()
     {
-        return $this->belongsToMany('Class', 'schedule_classes');
+        return $this->belongsToMany('ClassM', 'schedule_classes');
     }
 }

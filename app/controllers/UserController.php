@@ -1,6 +1,7 @@
 <?php
 
-class UserController extends BaseController {
+class UserController extends BaseController
+{
 
     public function getRegister()
     {
