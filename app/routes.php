@@ -15,6 +15,7 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
  */
 Route::group(array('before' => 'auth'), function()
 {
+    // home
     Route::get('/home',array('uses' => 'HomeController@getHome'));
 
     // schedules
