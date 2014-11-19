@@ -26,7 +26,7 @@ class ActivityController extends BaseController
         if ($validator->passes()) {
             $activity = Activity::create($input);
             if (!is_null($activity->id)) {
-                return Redirect::to('dashboard')->with('success', 'Activity Added');
+                return Redirect::to('home')->with('success', 'Activity Added');
             }
         }
         return Redirect::to('schedules/activities/new')->withErrors($validator)->withInput($input);

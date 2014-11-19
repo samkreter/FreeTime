@@ -28,10 +28,10 @@ class UserController extends BaseController
             $user = new User($input);
             $user->password = Hash::make($input['password']);
             if ($user->save()) {
-                return Redirect::to('/register')->with('success', 'Account created!');
+                return Redirect::to('home')->with('success', 'Account created!');
             }
         }
-        return Redirect::to('/register')->withErrors($validator)
+        return Redirect::to('login')->withErrors($validator)
             ->withInput(Input::except('password'));
     }
 
@@ -51,8 +51,19 @@ class UserController extends BaseController
         if (Auth::attempt(array(
             'username' => Input::get('username'),
             'password' => Input::get('password')))) {
-            return Redirect::intended('dashboard');
+            return Redirect::intended('home');
         }
         return Redirect::to('/login')->with('errors', 'Invalid username/password combination!');
+    }
+
+    /**
+     * If a user is logged in, log them out and redirect them to the index page.
+     */
+    public function getLogout()
+    {
+        if (Auth::check()) {
+            Auth::logout();
+        }
+        return Redirect::to('index');
     }
 }

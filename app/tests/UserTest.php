@@ -86,7 +86,7 @@ class UserTest extends TestCase {
             'password'  => 'testcase',
         );
         $response = $this->call('POST', '/login', $input);
-        $this->assertRedirectedTo('dashboard');
+        $this->assertRedirectedTo('home');
     }
 
     public function testLoginFalse()

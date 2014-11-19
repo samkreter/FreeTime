@@ -40,13 +40,13 @@
 
                             <div class="row">
                                 <div id="right-line-solid" class="col-md-6">
-                                  <form name="sent-login-info" id="loginForm" novalidate>
+                                  <form method="POST" action="login" name="sent-login-info" id="loginForm" novalidate>
                                       <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
+                                          <input name="username" type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="form-group">
-                                          <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                          <input name="password" type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="col-lg-12 text-center">
@@ -56,17 +56,21 @@
                                     </form>
                                 </div>
                                 <div class="col-md-6">
-                                  <form name="sent-register-info" id="registerForm" novalidate>
+                                  <form method="POST" action="register" name="sent-register-info" id="registerForm">
                                       <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Username *" id="register-username" required data-validation-required-message="Please enter your Username.">
+                                          <input name="username" type="text" class="form-control" placeholder="Username *" id="register-username" required data-validation-required-message="Please enter your Username.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="form-group">
-                                          <input type="password" class="form-control" placeholder="Enter Password *" id="register-pass" required data-validation-required-message="Please enter your Password.">
+                                          <input name="password" type="password" class="form-control" placeholder="Enter Password *" id="register-pass" required data-validation-required-message="Please enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
-                                      <div class="form-group">
-                                          <input type="password" class="form-control" placeholder="Re-Enter Password *" id="re-pass" required data-validation-required-message="Please re-enter your Password.">
+                                      <div class="form-group col-lg-6">
+                                          <input name="first_name" type="text" class="form-control" placeholder="Enter Your First Name *" id="fname" required data-validation-required-message="Please re-enter your Password.">
+                                          <p class="help-block text-danger"></p>
+                                      </div>
+                                      <div class="form-group col-lg-6">
+                                          <input name="last_name" type="text" class="form-control" placeholder="Enter Your Last Name *" id="lname" required data-validation-required-message="Please re-enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
                                       <div class="col-lg-12 text-center">

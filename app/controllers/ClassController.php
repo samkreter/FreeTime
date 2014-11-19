@@ -24,7 +24,7 @@ class ClassController extends BaseController
         if ($validator->passes()) {
             $activity = ClassM::create($input);
             if (!is_null($activity->id)) {
-                return Redirect::to('dashboard')->with('success', 'Class Added');
+                return Redirect::to('home')->with('success', 'Class Added');
             }
         }
         return Redirect::to('schedules/classes/new')->withErrors($validator)->withInput($input);
