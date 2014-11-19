@@ -28,6 +28,7 @@ class UserController extends BaseController
             $user = new User($input);
             $user->password = Hash::make($input['password']);
             if ($user->save()) {
+                Auth::loginUsingId($user->id);
                 return Redirect::to('home')->with('success', 'Account created!');
             }
         }
@@ -64,6 +65,6 @@ class UserController extends BaseController
         if (Auth::check()) {
             Auth::logout();
         }
-        return Redirect::to('index');
+        return Redirect::to('/');
     }
 }
