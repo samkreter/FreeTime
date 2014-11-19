@@ -1,1 +1,1 @@
-<?php if (count($errors) > 0) { dd($errors->messages()); } ?>
+<?php if (count($errors) > 0) { dd($errors); } ?>

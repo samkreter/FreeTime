@@ -182,7 +182,7 @@
 
                             <div class="row">
                                 <div id="right-line-solid" class="col-md-6">
-                                  <form name="sent-login-info" id="loginForm" novalidate>
+                                  <form method="POST" action="login" name="sent-login-info" id="loginForm" novalidate>
                                       <div class="form-group">
                                           <input name="username" type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
                                           <p class="help-block text-danger"></p>
@@ -198,7 +198,7 @@
                                     </form>
                                 </div>
                                 <div class="col-md-6">
-                                  <form method="POST" action="register" name="sent-register-info" id="registerForm" novalidate>
+                                  <form method="POST" action="register" name="sent-register-info" id="registerForm">
                                       <div class="form-group">
                                           <input name="username" type="text" class="form-control" placeholder="Username *" id="register-username" required data-validation-required-message="Please enter your Username.">
                                           <p class="help-block text-danger"></p>
