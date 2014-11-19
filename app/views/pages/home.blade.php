@@ -228,35 +228,48 @@
                                       <div class="row">
                                           <div class="col-md-12">
                                             <form name="sent-login-info" id="loginForm" novalidate>
-                                                  <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Sport Name *" name="sportName" required data-validation-required-message="Please enter the Sport's Name.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Sport Location *" name="sportLocation" required data-validation-required-message="Please enter the Sport's Location.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label>Min Number of People</label>
+                                                        <input type="number" class="form-control" placeholder="Min Number of People *" name="sportMinNum" required data-validation-required-message="Please enter the Minimal Number of People to play.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label>Max Number of People *</label>
+                                                        <input type="number" class="form-control" placeholder="Mex Number of People *" name="sportMaxNum" required data-validation-required-message="Please enter the Max Number of People.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                      <input type="date" class="form-control" placeholder="Sport Date *" name="sportDate" required data-validation-required-message="Please enter the Sport's Date.">
                                                       <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <input type="date" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group col-md-6">
-                                                      <input type="datetime" class="form-control" placeholder="Start Time *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group col-md-6">
-                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="col-lg-12 text-center">
-                                                      <div id="success"></div>
-                                                      <button type="submit" class="btn btn-xl">Add</button>
-                                                  </div>
-                                                </form>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label>Start Time</label>
+                                                        <input type="time" class="form-control" placeholder="Start Time *" name="sportStartTime" required data-validation-required-message="Please enter the Sport's Start Time.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label>End Time *</label>
+                                                        <input type="time" class="form-control" placeholder="End Time *" name="sportEndTime" required data-validation-required-message="Please enter the Sport's End Time.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="textbox" class="form-control" placeholder="Needed Equipment *" name="classRoomNumber" required data-validation-required-message="Please enter the needed equiptment for the sport.">
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="col-lg-12 text-center">
+                                                        <div id="success"></div>
+                                                        <button type="submit" class="btn btn-xl">Add</button>
+                                                    </div>
+                                                  </form>
                                           </div>
                                         </div>
                                     </div> <!-- sport tab-->
