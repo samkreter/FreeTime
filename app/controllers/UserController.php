@@ -55,4 +55,15 @@ class UserController extends BaseController
         }
         return Redirect::to('/login')->with('errors', 'Invalid username/password combination!');
     }
+
+    /**
+     * If a user is logged in, log them out and redirect them to the index page.
+     */
+    public function getLogout()
+    {
+        if (Auth::check()) {
+            Auth::logout();
+        }
+        return Redirect::to('index');
+    }
 }
