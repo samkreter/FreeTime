@@ -18,7 +18,25 @@
                     <a class="navbar-brand page-scroll" href="#page-top">FreeTime</a>
                 </div>
 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#login">Login/Register</a>
+                        </li>
 
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#team">Meet The Group</a>
+                        </li>
+
+                    </ul>
+                </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
