@@ -1,3 +1,4 @@
+
 @extends('layouts.main')
 
 @section('content')
@@ -11,17 +12,10 @@
           .filler{
             background-color: white;
           }
-          .calandar-filler{
+          .calendar-custum{
               position:relative;
-              top:-50px;
-              left:400px;
-              width: 700px;
-              height: 400px;
-              padding: 25px;
-              border: 25px solid navy;
-              margin: 25px;
+              top:-61px;
           }
-
         </style>
 
         <!-- Navigation -->
@@ -48,13 +42,13 @@
                             <a href="#portfolioModal1" class="page-scroll top-nav-menu" data-toggle="modal"><b>I Got FreeTime!</b></a>
                         </li>
                         <li>
-                            <a  class="page-scroll filler" href="#services">     </a>
+                            <a  class="filler">     </a>
                         </li>
                         <li>
                             <a class="page-scroll top-nav-menu" href="#portfolioModal2" data-toggle="modal"><b>Add Activity</b></a>
                         </li>
                         <li>
-                            <a class="page-scroll filler" href="#services">     </a>
+                            <a class="filler">     </a>
                         </li>
                         <li>
                             <a class="page-scroll top-nav-menu" href="#portfolioModal3" data-toggle="modal"><b>Remove Activity</b></a>
@@ -76,9 +70,9 @@
                         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
-                <div class="calandar-filler">
-                    <b>I'M A REAL CALANDAR!!!!!</b>
-                </div>
+
+                    <div id="calendar" class="calendar-custum"></div>
+
                 </div>
             </div>
         </section>
