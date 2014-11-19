@@ -42,13 +42,13 @@
                             <a href="#portfolioModal1" class="page-scroll top-nav-menu" data-toggle="modal"><b>I Got FreeTime!</b></a>
                         </li>
                         <li>
-                            <a  class="page-scroll filler" href="#services">     </a>
+                            <a  class="filler">     </a>
                         </li>
                         <li>
                             <a class="page-scroll top-nav-menu" href="#portfolioModal2" data-toggle="modal"><b>Add Activity</b></a>
                         </li>
                         <li>
-                            <a class="page-scroll filler" href="#services">     </a>
+                            <a class="filler">     </a>
                         </li>
                         <li>
                             <a class="page-scroll top-nav-menu" href="#portfolioModal3" data-toggle="modal"><b>Remove Activity</b></a>
