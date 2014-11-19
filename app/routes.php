@@ -10,7 +10,7 @@ Route::post('register', array('uses' => 'UserController@postCreate'));
 Route::get('login', array('uses' => 'UserController@getLogin'));
 Route::post('login', array('uses' => 'UserController@postLogin'));
 
-Route::get('logout', array('uses' => ''))
+Route::get('logout', array('uses' => 'UserController@getLogout'));
 
 /**
  * Require the user to be logged in for the following routes
