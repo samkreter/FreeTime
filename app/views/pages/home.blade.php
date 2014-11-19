@@ -89,7 +89,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <span class="copyright">Copyright &copy; Your Website 2014</span>
+                        <span class="copyright">Copyright &copy; BadAss DBGroup 2014</span>
                     </div>
                     <div class="col-md-4">
                         <ul class="list-inline social-buttons">
@@ -177,13 +177,124 @@
                                   <!-- Tab panes -->
                                   <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="class">
-                                        class
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                              <form name="sent-login-info" id="loginForm" novalidate>
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" placeholder="Class Title *" name="classTitle" required data-validation-required-message="Please enter the Class Title.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" placeholder="Class Instructor *" name="classInstructor" required data-validation-required-message="Please enter Class Instructor.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <fieldset>
+                                                      <label>Days Class Meets</label>
+                                                      <span class="navbar-brand">
+                                                        <input type="checkbox" name="Monday" value="Monday" />Monday
+                                                        <input type="checkbox" name="Tuesday" value="Tuesday" />Tuesday
+                                                        <input type="checkbox" name="Wednesday" value="Wednesday" />Wednesday
+                                                        <input type="checkbox" name="Thursday" value="Thursday" />Thursday
+                                                        <input type="checkbox" name="Friday" value="Friday" />Friday
+                                                        <input type="checkbox" name="Saterday" value="Saterday" />Saterday
+                                                        <input type="checkbox" name="Sunday" value="Sunday" />Sunday
+                                                      </span>
+                                                    </fieldset>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <label>Start Time</label>
+                                                      <input type="time" class="form-control" placeholder="Start Time *" name="classStartTime" required data-validation-required-message="Please enter the Class Start Time.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <label>End Time *</label>
+                                                      <input type="time" class="form-control" placeholder="End Time *" name="classEndTime" required data-validation-required-message="Please enter the Class End Time.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" placeholder="Room Number *" name="classRoomNumber" required data-validation-required-message="Please enter Class Room Number.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="col-lg-12 text-center">
+                                                      <div id="success"></div>
+                                                      <button type="submit" class="btn btn-xl">Add</button>
+                                                  </div>
+                                                </form>
+                                            </div>
+                                          </div>
                                     </div><!-- class tab -->
                                     <div role="tabpanel" class="tab-pane" id="sport">
-                                      sport
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                            <form name="sent-login-info" id="loginForm" novalidate>
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="date" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <input type="datetime" class="form-control" placeholder="Start Time *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="col-lg-12 text-center">
+                                                      <div id="success"></div>
+                                                      <button type="submit" class="btn btn-xl">Add</button>
+                                                  </div>
+                                                </form>
+                                          </div>
+                                        </div>
                                     </div> <!-- sport tab-->
                                     <div role="tabpanel" class="tab-pane" id="activity">
-                                      activity
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                            <form name="sent-login-info" id="loginForm" novalidate>
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="date" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <input type="datetime" class="form-control" placeholder="Start Time *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
+                                                      <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="col-lg-12 text-center">
+                                                      <div id="success"></div>
+                                                      <button type="submit" class="btn btn-xl">Add</button>
+                                                  </div>
+                                                </form>
+                                          </div>
+                                        </div>
                                     </div><!--activity tab -->
 
                                   </div>
