@@ -21,6 +21,10 @@
               border: 25px solid navy;
               margin: 25px;
           }
+          #calendar{
+            position:relative;
+            top:-61ypx;
+          }
 
         </style>
 
@@ -77,7 +81,6 @@
                         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
-                <hr>
 	               <div id="calendar"></div>
                 </div>
             </div>
