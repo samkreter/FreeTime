@@ -14,8 +14,7 @@ class UserTest extends TestCase {
             'first_name'    => 'kyle',
             'last_name'     => 'mccarthy',
             'username'      => 'kyle',
-            'password'      => 'testcase',
-            'dob'           => '10/15/1993',
+            'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
@@ -28,8 +27,7 @@ class UserTest extends TestCase {
             'first_name'    => 'kyle',
             'last_name'     => 'mccarthy',
             'username'      => 'kyle',
-            'password'      => 'testcase',
-            'dob'           => '10/15/1993',
+            'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
@@ -43,8 +41,7 @@ class UserTest extends TestCase {
             'first_name'    => '',
             'last_name'     => 'mccarthy',
             'username'      => 'kyle',
-            'password'      => 'testcase',
-            'dob'           => '10/15/1993',
+            'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
@@ -58,8 +55,7 @@ class UserTest extends TestCase {
             'first_name'    => 'kyle',
             'last_name'     => '',
             'username'      => 'kyle',
-            'password'      => 'testcase',
-            'dob'           => '10/15/1993',
+            'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
@@ -73,27 +69,11 @@ class UserTest extends TestCase {
             'first_name'    => 'kyle',
             'last_name'     => 'mccarthy',
             'username'      => 'kyle',
-            'password'      => 'test',
-            'dob'           => '10/15/1993',
+            'password'      => 'test'
         );
         $this->call('POST', '/register', $input);
         $this->assertRedirectedTo('register');
         $this->assertSessionHasErrors(array('password'));
-    }
-
-    public function testCreateInvalidDOB()
-    {
-        Artisan::call('migrate:refresh');
-        $input = array(
-            'first_name'    => 'kyle',
-            'last_name'     => 'mccarthy',
-            'username'      => 'kyle',
-            'password'      => 'testcase',
-            'dob'           => '',
-        );
-        $this->call('POST', '/register', $input);
-        $this->assertRedirectedTo('register');
-        $this->assertSessionHasErrors(array('dob'));
     }
 
     public function testLoginTrue()
