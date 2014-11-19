@@ -26,7 +26,7 @@ class SportController extends BaseController
         if ($validator->passes()) {
             $activity = Sport::create($input);
             if (!is_null($activity->id)) {
-                return Redirect::to('dashboard')->with('success', 'Sport Added');
+                return Redirect::to('home')->with('success', 'Sport Added');
             }
         }
         return Redirect::to('schedules/sports/new')->withErrors($validator)->withInput($input);
