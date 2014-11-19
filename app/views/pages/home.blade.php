@@ -256,7 +256,7 @@
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="textbox" class="form-control" placeholder="Needed Equipment *" name="sportEquipment" required data-validation-required-message="Please enter the needed equiptment for the sport.">
+                                                        <input type="textbox" class="form-control" placeholder="Needed Equipment" name="sportEquipment" required data-validation-required-message="Please enter the needed equiptment for the sport.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="col-lg-12 text-center">
