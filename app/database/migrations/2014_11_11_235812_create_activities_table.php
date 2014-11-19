@@ -14,8 +14,10 @@ class CreateActivitiesTable extends Migration
             $table->smallInteger('min_players');
             $table->smallInteger('max_players');
             $table->string('name', 255);
+            $table->string('location', 255);
             $table->time('start');
             $table->time('end');
+            $table->text('supplies')->nullable();
         });
     }
 

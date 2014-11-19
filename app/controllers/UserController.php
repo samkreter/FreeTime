@@ -21,8 +21,7 @@ class UserController extends BaseController
             'first_name'    => 'required|max:255',
             'last_name'     => 'required|max:255',
             'username'      => 'required|unique:users',
-            'password'      => 'required|min:8',
-            'dob'           => 'required|date'
+            'password'      => 'required|min:8'
         );
         $validator = Validator::make($input, $rules);
         if ($validator->passes()) {

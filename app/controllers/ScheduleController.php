@@ -8,8 +8,8 @@ class ScheduleController extends BaseController
      */
     public function getAll()
     {
-        $schedules = Schedules::where('user_id', '=', Auth::user()->id)->get();
-        return View::make('schedules.index')->with('schedules', $schedules);
+        $schedules = Schedule::where('user_id', '=', Auth::user()->id)->get();
+        return Response::json($schedules);
     }
 
     /**

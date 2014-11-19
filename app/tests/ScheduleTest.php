@@ -9,7 +9,7 @@ class ScheduleTest extends TestCase {
         $this->be($user);
         // set the date
         $input = array(
-            'date'  => date('2014-11-8'),
+            'date'  => date('8-11-2014'),
         );
         $this->call('POST', '/schedules/new', $input);
         $this->assertSessionHas('success');
