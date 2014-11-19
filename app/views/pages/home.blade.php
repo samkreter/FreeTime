@@ -24,6 +24,7 @@
 
         </style>
 
+
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -76,9 +77,8 @@
                         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
-                <div class="calandar-filler">
-                    <b>I'M A REAL CALANDAR!!!!!</b>
-                </div>
+                <hr>
+	               <div id="calendar"></div>
                 </div>
             </div>
         </section>
@@ -380,5 +380,9 @@
                 </div>
             </div>
         </div>
+
+        <script>
+
+        </script>
 
 @stop
