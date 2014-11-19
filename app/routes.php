@@ -1,7 +1,6 @@
 <?php
 
 Route::get('/', array('uses' => 'HomeController@getIndex'));
-Route::get('/home',array('uses' => 'HomeController@getHome'));
 
 // registration
 Route::get('register', array('uses' => 'UserController@getRegister'));
@@ -16,6 +15,8 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
  */
 Route::group(array('before' => 'auth'), function()
 {
+    Route::get('/home',array('uses' => 'HomeController@getHome'));
+
     // schedules
     Route::get('/schedules/all', array('uses' => 'ScheduleController@getAll'));
     Route::get('/schedules/view/{id}', array('uses' => 'ScheduleController@getView'));
