@@ -262,7 +262,7 @@
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="textbox" class="form-control" placeholder="Needed Equipment *" name="classRoomNumber" required data-validation-required-message="Please enter the needed equiptment for the sport.">
+                                                        <input type="textbox" class="form-control" placeholder="Needed Equipment *" name="sportEquipment" required data-validation-required-message="Please enter the needed equiptment for the sport.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="col-lg-12 text-center">
@@ -276,36 +276,49 @@
                                     <div role="tabpanel" class="tab-pane" id="activity">
                                       <div class="row">
                                           <div class="col-md-12">
-                                            <form name="sent-login-info" id="loginForm" novalidate>
-                                                  <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Your Username *" id="username" required data-validation-required-message="Please enter your Username.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <input type="date" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group col-md-6">
-                                                      <input type="datetime" class="form-control" placeholder="Start Time *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group col-md-6">
-                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <input type="password" class="form-control" placeholder="Your Password *" id="pass" required data-validation-required-message="Please enter your Password.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
-                                                  <div class="col-lg-12 text-center">
-                                                      <div id="success"></div>
-                                                      <button type="submit" class="btn btn-xl">Add</button>
-                                                  </div>
-                                                </form>
+                                          <form name="sent-login-info" id="loginForm" novalidate>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Activity Name *" name="activityName" required data-validation-required-message="Please enter the Activity's Name.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Activity Location *" name="activityLocation" required data-validation-required-message="Please enter the Activity's Location.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Min Number of People</label>
+                                                    <input type="number" class="form-control" placeholder="Min Number of People *" name="activityMinNum" required data-validation-required-message="Please enter the Minimal Number of People.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Max Number of People *</label>
+                                                    <input type="number" class="form-control" placeholder="Mex Number of People *" name="activityMaxNum" required data-validation-required-message="Please enter the Max Number of People.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+
+                                                <div class="form-group">
+                                                  <input type="date" class="form-control" placeholder="Activity Date *" name="activityDate" required data-validation-required-message="Please enter the Activity's Date.">
+                                                  <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Start Time</label>
+                                                    <input type="time" class="form-control" placeholder="Start Time *" name="activityStartTime" required data-validation-required-message="Please enter the Activity's Start Time.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>End Time *</label>
+                                                    <input type="time" class="form-control" placeholder="End Time *" name="activityEndTime" required data-validation-required-message="Please enter the Activity's End Time.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="textbox" class="form-control" placeholder="Needed Supplies *" name="activityEquipment" required data-validation-required-message="Please enter the needed supplies for the Activity.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="col-lg-12 text-center">
+                                                    <div id="success"></div>
+                                                    <button type="submit" class="btn btn-xl">Add</button>
+                                                </div>
+                                              </form>
                                           </div>
                                         </div>
                                     </div><!--activity tab -->
