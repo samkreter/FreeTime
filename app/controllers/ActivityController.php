@@ -19,7 +19,8 @@ class ActivityController extends BaseController
             'max_players'   => 'required|integer',
             'name'          => 'required|max:255',
             'start'         => 'required',
-            'end'           => 'required'
+            'end'           => 'required',
+            'location'      => 'required|max:255'
         );
         $validator = Validator::make($input, $rules);
         if ($validator->passes()) {

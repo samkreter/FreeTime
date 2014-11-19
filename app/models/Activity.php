@@ -5,7 +5,7 @@ class Activity extends Eloquent
 
     protected $table = 'activities';
     public $timestamps = true;
-    protected $fillable = array('name', 'start', 'end', 'min_players', 'max_players');
+    protected $fillable = array('name', 'start', 'end', 'min_players', 'max_players', 'supplies', 'location');
 
     /**
      * Get all the schedules the sport appears on

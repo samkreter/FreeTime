@@ -10,7 +10,8 @@ class SportTest extends TestCase {
             'start'         => '10:00 am',
             'end'           => '11:50 am',
             'min_players'   => 1,
-            'max_players'   => 20
+            'max_players'   => 20,
+            'location'      => 'Memorial',
         );
         $this->call('POST', '/schedules/sports/new', $input);
         $this->assertSessionHas('success');

@@ -10,7 +10,8 @@ class ActivityTest extends TestCase {
             'start'         => '10:00 am',
             'end'           => '11:50 am',
             'min_players'   => 1,
-            'max_players'   => 100
+            'max_players'   => 100,
+            'location'      => 'Memorial',
         );
         $this->call('POST', '/schedules/activities/new', $input);
         $this->assertSessionHas('success');
