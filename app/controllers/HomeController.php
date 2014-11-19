@@ -9,7 +9,7 @@ class HomeController extends BaseController
 	}
 
 	public function getIndex(){
-			return View::make('pages.index');
+        return View::make('pages.index');
 	}
 
 }
