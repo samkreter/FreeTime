@@ -27,10 +27,16 @@
         <!-- login/ register section -->
         <section id="login">
             <div class="container">
+              <?php  if(isset($loginError)): ?>
+                <div class="row">
+                 <div class="alert alert-danger col-lg-6" role="alert"><?php echo $loginError; ?></div><?php endif;?>
+                 <div class="alert alert-danger col-lg-6" role="alert"><?php foreach($errors as $error){echo $error;} ?></div>
+                </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <h2 class="section-heading text-center">Log In Existing User</h2>
                     </div>
+
                     <div class="col-lg-6">
                         <h2 class="section-heading text-center">Register New User</h2>
                     </div>

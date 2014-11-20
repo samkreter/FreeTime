@@ -25,14 +25,14 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#login">Login/Register</a>
+                            <a class="page-scroll" href="#about">About</a>
                         </li>
 
                         <li>
-                            <a class="page-scroll" href="#about">About</a>
+                            <a class="page-scroll" href="#team">Meet The Group</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#team">Meet The Group</a>
+                            <a class="page-scroll" href="#login">Login/Register</a>
                         </li>
 
                     </ul>
