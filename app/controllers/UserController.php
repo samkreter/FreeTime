@@ -54,7 +54,7 @@ class UserController extends BaseController
             'password' => Input::get('password')))) {
             return Redirect::intended('home');
         }
-        return Redirect::to('/login')->with('login-error', 'Invalid username/password combination!');
+        return Redirect::to('/login')->with('loginError', 'Invalid username/password combination!');
     }
 
     /**
