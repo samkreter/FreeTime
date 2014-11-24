@@ -27,9 +27,10 @@
         <!-- login/ register section -->
         <section id="login">
             <div class="container">
-              <?php  if(isset($loginError)): ?>
+              <?php  if($loginError): ?>
                 <div class="row">
-                 <div class="alert alert-danger col-lg-6" role="alert"><?php echo $loginError; ?></div><?php endif;?>
+                 <div class="alert alert-danger col-lg-6" role="alert"><?php echo $loginError; ?></div>
+                 <?php endif;?>
                  <div class="alert alert-danger col-lg-6" role="alert"><?php foreach($errors as $error){echo $error;} ?></div>
                 </div>
                 <div class="row">
