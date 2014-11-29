@@ -33,7 +33,7 @@ class UserController extends BaseController
             }
         }
         return Redirect::to('login')->withErrors($validator)
-            ->withInput(Input::except('password'));
+          ->withInput(Input::except('password'));
     }
 
     public function getLogin()
