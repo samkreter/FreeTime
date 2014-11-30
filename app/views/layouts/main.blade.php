@@ -78,6 +78,7 @@
     center: 'title',
     right: 'agendaWeek,agendaDay'
     },
+    defaultView: 'agendaDay',
     editable: true,
     events: [
     {
