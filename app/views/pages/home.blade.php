@@ -148,10 +148,10 @@
                 </div>
             </div>
         </div>
-
         <!-- Add Modal 2 -->
+
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content"> 
+            <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -189,18 +189,9 @@
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group">
-                                                    <fieldset>
-                                                      <label>Days Class Meets</label>
-                                                      <span class="navbar-brand">
-                                                        <input type="checkbox" name="Monday" value="Monday" />Monday
-                                                        <input type="checkbox" name="Tuesday" value="Tuesday" />Tuesday
-                                                        <input type="checkbox" name="Wednesday" value="Wednesday" />Wednesday
-                                                        <input type="checkbox" name="Thursday" value="Thursday" />Thursday
-                                                        <input type="checkbox" name="Friday" value="Friday" />Friday
-                                                        <input type="checkbox" name="Saterday" value="Saterday" />Saterday
-                                                        <input type="checkbox" name="Sunday" value="Sunday" />Sunday
-                                                      </span>
-                                                    </fieldset>
+                                                    <label>Date *</label>
+                                                    <input type="date" class="form-control" placeholder="Sport Date *" name="sportDate" required data-validation-required-message="Please enter the Sport's Date.">
+                                                    <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group col-md-6">
                                                       <label>Start Time</label>
@@ -248,6 +239,7 @@
                                                     </div>
 
                                                     <div class="form-group">
+                                                      <label>Date *</label>
                                                       <input type="date" class="form-control" placeholder="Sport Date *" name="sportDate" required data-validation-required-message="Please enter the Sport's Date.">
                                                       <p class="help-block text-danger"></p>
                                                     </div>
@@ -297,6 +289,7 @@
                                                 </div>
 
                                                 <div class="form-group">
+                                                  <label>Date *</label>
                                                   <input type="date" class="form-control" placeholder="Activity Date *" name="activityDate" required data-validation-required-message="Please enter the Activity's Date.">
                                                   <p class="help-block text-danger"></p>
                                                 </div>
