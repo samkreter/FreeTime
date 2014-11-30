@@ -276,23 +276,23 @@
                                     <div role="tabpanel" class="tab-pane" id="activity">
                                       <div class="row">
                                           <div class="col-md-12">
-                                          <form name="sent-login-info" id="loginForm" novalidate>
+                                          <form method="post" action="/schedules/activities/new" name="sent-activity-info" id="activityForm" novalidate>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Activity Name *" name="activityName" required data-validation-required-message="Please enter the Activity's Name.">
+                                                    <input type="text" class="form-control" placeholder="Activity Name *" name="name" required data-validation-required-message="Please enter the Activity's Name.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Activity Location *" name="activityLocation" required data-validation-required-message="Please enter the Activity's Location.">
+                                                    <input type="text" class="form-control" placeholder="Activity Location *" name="location" required data-validation-required-message="Please enter the Activity's Location.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>Min Number of People</label>
-                                                    <input type="number" class="form-control" placeholder="Min Number of People *" name="activityMinNum" required data-validation-required-message="Please enter the Minimal Number of People.">
+                                                    <input type="number" class="form-control" placeholder="Min Number of People *" name="min_players" required data-validation-required-message="Please enter the Minimal Number of People.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>Max Number of People *</label>
-                                                    <input type="number" class="form-control" placeholder="Mex Number of People *" name="activityMaxNum" required data-validation-required-message="Please enter the Max Number of People.">
+                                                    <input type="number" class="form-control" placeholder="Mex Number of People *" name="max_players" required data-validation-required-message="Please enter the Max Number of People.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
 
@@ -302,12 +302,12 @@
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>Start Time</label>
-                                                    <input type="time" class="form-control" placeholder="Start Time *" name="activityStartTime" required data-validation-required-message="Please enter the Activity's Start Time.">
+                                                    <input type="time" class="form-control" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Activity's Start Time.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>End Time *</label>
-                                                    <input type="time" class="form-control" placeholder="End Time *" name="activityEndTime" required data-validation-required-message="Please enter the Activity's End Time.">
+                                                    <input type="time" class="form-control" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Activity's End Time.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group">
