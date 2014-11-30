@@ -179,13 +179,13 @@
                                     <div role="tabpanel" class="tab-pane active" id="class">
                                         <div class="row">
                                             <div class="col-md-12">
-                                              <form name="sent-login-info" id="loginForm" novalidate>
+                                              <form method="post" action="/schedules/classes/new" name="sent-class-info" id="classForm" novalidate>
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Class Title *" name="classTitle" required data-validation-required-message="Please enter the Class Title.">
+                                                      <input type="text" class="form-control" placeholder="Class Title *" name="title" required data-validation-required-message="Please enter the Class Title.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Class Instructor *" name="classInstructor" required data-validation-required-message="Please enter Class Instructor.">
+                                                      <input type="text" class="form-control" placeholder="Class Instructor *" name="instructor" required data-validation-required-message="Please enter Class Instructor.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group">
@@ -204,12 +204,12 @@
                                                   </div>
                                                   <div class="form-group col-md-6">
                                                       <label>Start Time</label>
-                                                      <input type="time" class="form-control" placeholder="Start Time *" name="classStartTime" required data-validation-required-message="Please enter the Class Start Time.">
+                                                      <input type="time" class="form-control" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Class Start Time.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group col-md-6">
                                                       <label>End Time *</label>
-                                                      <input type="time" class="form-control" placeholder="End Time *" name="classEndTime" required data-validation-required-message="Please enter the Class End Time.">
+                                                      <input type="time" class="form-control" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Class End Time.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group">
@@ -227,23 +227,23 @@
                                     <div role="tabpanel" class="tab-pane" id="sport">
                                       <div class="row">
                                           <div class="col-md-12">
-                                            <form name="sent-login-info" id="loginForm" novalidate>
+                                            <form method="post" action="/schedules/sports/new" name="sent-sport-info" id="sportForm" novalidate>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Sport Name *" name="sportName" required data-validation-required-message="Please enter the Sport's Name.">
+                                                        <input type="text" class="form-control" placeholder="Sport Name *" name="name" required data-validation-required-message="Please enter the Sport's Name.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Sport Location *" name="sportLocation" required data-validation-required-message="Please enter the Sport's Location.">
+                                                        <input type="text" class="form-control" placeholder="Sport Location *" name="location" required data-validation-required-message="Please enter the Sport's Location.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Min Number of People</label>
-                                                        <input type="number" class="form-control" placeholder="Min Number of People *" name="sportMinNum" required data-validation-required-message="Please enter the Minimal Number of People to play.">
+                                                        <input type="number" class="form-control" placeholder="Min Number of People *" name="min_players" required data-validation-required-message="Please enter the Minimal Number of People to play.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Max Number of People *</label>
-                                                        <input type="number" class="form-control" placeholder="Mex Number of People *" name="sportMaxNum" required data-validation-required-message="Please enter the Max Number of People.">
+                                                        <input type="number" class="form-control" placeholder="Mex Number of People *" name="max_players" required data-validation-required-message="Please enter the Max Number of People.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
 
@@ -253,12 +253,12 @@
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Start Time</label>
-                                                        <input type="time" class="form-control" placeholder="Start Time *" name="sportStartTime" required data-validation-required-message="Please enter the Sport's Start Time.">
+                                                        <input type="time" class="form-control" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Sport's Start Time.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>End Time *</label>
-                                                        <input type="time" class="form-control" placeholder="End Time *" name="sportEndTime" required data-validation-required-message="Please enter the Sport's End Time.">
+                                                        <input type="time" class="form-control" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Sport's End Time.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group">

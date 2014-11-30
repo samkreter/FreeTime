@@ -12,6 +12,8 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
 
 Route::get('logout', array('uses' => 'UserController@getLogout'));
 
+
+
 /**
  * Require the user to be logged in for the following routes
  */
@@ -19,6 +21,7 @@ Route::group(array('before' => 'auth'), function()
 {
     // home
     Route::get('/home',array('uses' => 'HomeController@getHome'));
+
 
     // schedules
     Route::get('/schedules/all', array('uses' => 'ScheduleController@getAll'));
