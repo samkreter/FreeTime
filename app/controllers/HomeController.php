@@ -14,4 +14,17 @@ class HomeController extends BaseController
         return View::make('pages.index');
 	}
 
+	public function getEvents(){
+
+
+
+		$event = array(
+			'title' => 'All Day Event sam',
+			'start' => '2014-11-30');
+
+		Log::error("sonthing went wrong");
+
+		return Response::json($event);
+	}
+
 }
