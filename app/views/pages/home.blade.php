@@ -51,7 +51,7 @@
                             <a class="filler">     </a>
                         </li>
                         <li>
-                            <a class="page-scroll top-nav-menu" href="#portfolioModal3" data-toggle="modal"><b>Remove Activity</b></a>
+                            <a class="page-scroll top-nav-menu" href="#portfolioModal3" data-toggle="modal"><b>Schedule Activity</b></a>
                         </li>
                         <li>
                             <a class="filler">     </a>
@@ -332,7 +332,7 @@
             </div>
         </div>
 
-        <!-- Remove Modal 3 -->
+        <!-- Scheduling Modal 3 -->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -343,17 +343,22 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Choose What to Remove</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  <h2>Classes</h2>
+                                  <?php  ?>
+                                </div>
+                                <div class="col-lg-4">
+                                  <h2>Sports</h2>
+                                  <?php  ?>
+                                </div>
+                                <div class="col-lg-4">
+                                  <h2>Activities</h2>
+                                  <?php  ?>
+                                </div>
+                              </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

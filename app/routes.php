@@ -12,7 +12,7 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
 
 Route::get('logout', array('uses' => 'UserController@getLogout'));
 
-Route::post('/events',array('users'=> 'HomeController@getEvents'));
+Route::post('/events',array('uses'=> 'HomeController@getEvents'));
 
 
 /**
