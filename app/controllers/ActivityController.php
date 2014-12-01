@@ -2,11 +2,6 @@
 
 class ActivityController extends BaseController
 {
-    public function getCreate()
-    {
-
-    }
-
     /**
      * Try to create a new activity if the POST data is valid.
      * @return mixed

@@ -2,11 +2,6 @@
 
 class SportController extends BaseController
 {
-    public function getCreate()
-    {
-
-    }
-
     /**
      * Try to create a new sport if the POST data is valid.
      * @return mixed

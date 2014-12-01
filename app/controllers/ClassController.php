@@ -2,11 +2,6 @@
 
 class ClassController extends BaseController
 {
-    public function getCreate()
-    {
-
-    }
-
     /**
      * Validate a new class and if it is valid create it and save it to the DB.
      * @return mixed
