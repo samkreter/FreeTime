@@ -65,7 +65,7 @@ return array(
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => 'localhost',
+			'host'     => getenv('OPENSHIFT_POSTGRESQL_DB_HOST'),
 			'database' => 'freetime',
 			'username' => 'admincq2da2u',
 			'password' => 'Yh188i1B5DXr',
