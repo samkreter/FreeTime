@@ -72,6 +72,7 @@ return array(
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
+            'port'     => getenv('OPENSHIFT_POSTGRESQL_DB_PORT'),
 		),
 
 		'sqlsrv' => array(
