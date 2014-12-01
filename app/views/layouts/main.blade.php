@@ -36,7 +36,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" attr-schedule-id="null">
 
 
     @yield('content')
@@ -64,7 +64,6 @@
     <script src="js/fullcalendar.min.js"></script>
 
     <script>
-        var scheduleId = null;
         var $this = $('#calendar');
         $this.fullCalendar({
             header: {
@@ -83,7 +82,7 @@
                 color: 'yellow',   // a non-ajax option
                 textColor: 'black',
                 success: function(data) {
-                    scheduleId = data[0].title;
+                    $("body").attr('attr-schedule-id', data[0].title);
                 }
             }
         });
