@@ -72,7 +72,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="section-heading"><?php echo $username ?></h2>
+                        <h2 class="section-heading"><?php echo Auth::user()->username; ?></h2>
                         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
