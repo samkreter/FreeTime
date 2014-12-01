@@ -53,7 +53,6 @@
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script>
-    <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
@@ -81,7 +80,7 @@
     defaultView: 'agendaDay',
     editable: true,
     events: {
-        url: '/events',
+        url: '/schedules',
         type: 'POST',
         data: {
             custom_param1: 'something',
