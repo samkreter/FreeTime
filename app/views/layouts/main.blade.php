@@ -36,7 +36,7 @@
 
 </head>
 
-<body id="page-top" class="index" attr-schedule-id="null">
+<body id="page-top" class="index">
 
 
     @yield('content')
