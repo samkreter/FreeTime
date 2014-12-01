@@ -64,7 +64,9 @@
     <script src="js/fullcalendar.min.js"></script>
 
     <script>
-        $('#calendar').fullCalendar({
+        var scheduleId = null;
+        var $this = $('#calendar');
+        $this.fullCalendar({
             header: {
                 left: 'prev,next today',
                 center: 'title',
@@ -79,7 +81,10 @@
                     alert('there was an error while fetching events!');
                 },
                 color: 'yellow',   // a non-ajax option
-                textColor: 'black' // a non-ajax option
+                textColor: 'black',
+                success: function(data) {
+                    scheduleId = data[0].title;
+                }
             }
         });
     </script>
