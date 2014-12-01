@@ -51,4 +51,5 @@ Route::group(array('before' => 'auth'), function()
         array('uses' => 'SportController@postAdd'));
     Route::post('/schedules/{scheduleId}/sports/{sportId}/remove',
         array('uses' => 'SportController@getRemove'));
+
 });

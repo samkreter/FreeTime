@@ -9,16 +9,7 @@ class UserTest extends TestCase {
 
     public function testCreateUserTrue()
     {
-        Artisan::call('migrate:refresh');
-        $input = array(
-            'first_name'    => 'kyle',
-            'last_name'     => 'mccarthy',
-            'username'      => 'kyle',
-            'password'      => 'testcase'
-        );
-        $this->call('POST', '/register', $input);
-        $this->assertRedirectedTo('register');
-        $this->assertSessionHas('success');
+        $this->newUser();
     }
 
     public function testCreateUserInvalidUsername()
