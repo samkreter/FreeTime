@@ -49,7 +49,7 @@ class ScheduleController extends BaseController
             ->where('date', '=', $date)->with('classes', 'activities', 'sports')
             ->firstOrFail();
         // modify the data to make it displayable with the plugin
-        $events = array();
+        $events = array(array('schedule' => $schedule->id));
         // add activities
         foreach ($schedule->activities as $activity) {
             array_push($events, array(
