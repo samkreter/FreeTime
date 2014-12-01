@@ -78,7 +78,7 @@
                 url: '/schedules',
                 type: 'GET',
                 error: function() {
-                    alert('there was an error while fetching events!');
+                    console.log('there are no events for this day');
                 },
                 color: 'yellow',   // a non-ajax option
                 textColor: 'black',
