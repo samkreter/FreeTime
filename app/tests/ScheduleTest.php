@@ -14,4 +14,17 @@ class ScheduleTest extends TestCase {
         $this->call('POST', '/schedules/new', $input);
         $this->assertSessionHas('success');
     }
+
+    public function testViewSchedule()
+    {
+        // set the user
+        $user = User::where('username', '=', 'kyle')->first();
+        $this->be($user);
+        // set the date
+        $input = array(
+            'date'  => date('8-11-2014'),
+        );
+        $this->call('GET', '/schedules?start=8-11-2014');
+        $this->assertResponseOk();
+    }
 }
