@@ -52,9 +52,6 @@ class ScheduleController extends BaseController
         $activities = $schedule->activities;
         return Response::json(array(
             'schedule'      => $schedule,
-            'sports'        => $sports,
-            'classes'       => $classes,
-            'activities'    => $activities,
         ));
     }
 }
