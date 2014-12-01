@@ -349,20 +349,20 @@
                             <div class="col-lg-4">
                                 <h2>Classes</h2>
                                 <?php foreach($classes as $class){
-                                    echo "<h4><a href=''>$class->title - $class->instructor</a></h4>";
+                                    echo "<h4><a href='#' class='attach-item' attr-url='classes' attr-id='$class->id'>$class->title - $class->instructor</a></h4>";
                                 } ?>
                             </div>
                             <div class="col-lg-4">
                                 <h2>Sports</h2>
                                 <?php foreach($sports as $sport){
-                                    echo "<h4><a href=''>$sport->name - $sport->location</a><h4>";
+                                    echo "<h4><a href='#' class='attach-item' attr-url='sports' attr-id='$sport->id'>$sport->name - $sport->location</a><h4>";
                                 }
                                 ?>
                             </div>
                             <div class="col-lg-4">
                                 <h2>Activities</h2>
                                 <?php foreach($activities as $activity){
-                                    echo "<h4><a href='#'>$activity->name - $activity->location</a></h4>";
+                                    echo "<h4><a href='#' class='attach-item' attr-url='activities' attr-id='$activity->id'>$activity->name - $activity->location</a></h4>";
                                 }
                                 ?>
                             </div>
@@ -372,8 +372,6 @@
             </div>
         </div>
     </div>​
-
-
 
 
 @stop

@@ -32,25 +32,25 @@ Route::group(array('before' => 'auth'), function()
     // activities
     Route::get('/schedules/activities/new', array('uses' => 'ActivityController@getCreate'));
     Route::post('/schedules/activities/new', array('uses' => 'ActivityController@postCreate'));
-    Route::post('/schedules/{scheduleId}/activities/{activityId}/add',
-        array('uses' => 'ActivityController@postAdd'));
+    Route::get('/schedules/{scheduleId}/activities/{activityId}/add',
+        array('uses' => 'ActivityController@getAdd'));
     Route::get('/schedules/{scheduleId}/activities/{activityId}/remove',
         array('uses' => 'ActivityController@getRemove'));
 
     // classes
     Route::get('/schedules/classes/new', array('uses' => 'ClassController@getCreate'));
     Route::post('/schedules/classes/new', array('uses' => 'ClassController@postCreate'));
-    Route::post('/schedules/{scheduleId}/classes/{classId}/add',
-        array('uses' => 'ClassController@postAdd'));
+    Route::get('/schedules/{scheduleId}/classes/{classId}/add',
+        array('uses' => 'ClassController@getAdd'));
     Route::get('/schedules/{scheduleId}/classes/{classId}/remove',
         array('uses' => 'ClassController@getRemove'));
 
     // sports
     Route::get('/schedules/sports/new', array('uses' => 'SportController@getCreate'));
     Route::post('/schedules/sports/new', array('uses' => 'SportController@postCreate'));
-    Route::post('/schedules/{scheduleId}/sports/{sportId}/add',
-        array('uses' => 'SportController@postAdd'));
-    Route::post('/schedules/{scheduleId}/sports/{sportId}/remove',
+    Route::get('/schedules/{scheduleId}/sports/{sportId}/add',
+        array('uses' => 'SportController@getAdd'));
+    Route::get('/schedules/{scheduleId}/sports/{sportId}/remove',
         array('uses' => 'SportController@getRemove'));
 
 });

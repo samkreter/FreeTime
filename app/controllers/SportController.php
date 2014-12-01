@@ -33,7 +33,7 @@ class SportController extends BaseController
      * @param $sportId
      * @return mixed
      */
-    public function postAdd($scheduleId, $sportId)
+    public function getAdd($scheduleId, $sportId)
     {
         $schedule = Schedule::findOrFail($scheduleId);
         if ($schedule->user_id !== Auth::user()->id) {
