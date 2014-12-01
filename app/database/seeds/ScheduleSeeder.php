@@ -6,7 +6,7 @@ class ScheduleSeeder extends Seeder {
     {
         Schedule::create(array(
             'user_id'   => 1,
-            'date'  => date('11-30-2014'),
+            'date'  => date('12-01-2014'),
         ));
     }
 

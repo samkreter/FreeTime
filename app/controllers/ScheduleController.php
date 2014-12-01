@@ -43,7 +43,7 @@ class ScheduleController extends BaseController
     public function getView()
     {
         // todo :: do we want anyone to be able to view someones schedule or just the user??
-        $date = Input::get('start');
+        $date = date('m-d-Y', Input::get('start'));
         $schedule = Schedule::where('user_id', '=', Auth::user()->id)
             ->where('date', '=', $date)->with('classes', 'activities', 'sports')
             ->firstOrFail();
