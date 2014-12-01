@@ -91,7 +91,7 @@
                 var url = $(this).attr('attr-url');
                 var id = $(this).attr('attr-id');
                 var scheduleId = $('body').attr('attr-schedule-id');
-                var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id;
+                var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
                 $.get(fullUrl);
             });
         });
