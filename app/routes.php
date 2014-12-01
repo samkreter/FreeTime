@@ -4,7 +4,7 @@ Route::get('/', array('uses' => 'HomeController@getIndex'));
 
 // registration
 Route::get('register', array('uses' => 'UserController@getRegister'));
-Route::post('register', array('uses' => 'UserController@postCreate'));
+Route::post('register', array('uses' => 'UserController@postRegister'));
 
 // user authentication
 Route::get('login', array('uses' => 'UserController@getLogin'));
@@ -12,6 +12,7 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
 
 Route::get('logout', array('uses' => 'UserController@getLogout'));
 
+Route::post('/events',array('users'=> 'HomeController@getEvents'));
 
 
 /**
@@ -25,7 +26,7 @@ Route::group(array('before' => 'auth'), function()
 
     // schedules
     Route::get('/schedules/all', array('uses' => 'ScheduleController@getAll'));
-    Route::get('/schedules/view/{id}', array('uses' => 'ScheduleController@getView'));
+    Route::get('/schedules', array('uses' => 'ScheduleController@getView'));
     Route::post('/schedules/new', array('uses' => 'ScheduleController@postCreate'));
 
     // activities

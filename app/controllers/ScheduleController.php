@@ -38,13 +38,14 @@ class ScheduleController extends BaseController
     /**
      * Get the schedule resource from the DB along with it's relations.  Flash the
      * data to the view.
-     * @param $id
      * @return mixed
      */
-    public function getView($id)
+    public function getView()
     {
         // todo :: do we want anyone to be able to view someones schedule or just the user??
-        $schedule = Schedule::findOrFail($id)->with('classes', 'activities', 'sports');
+        $date = Input::get('start');
+        $schedule = Schedule::where('user_id', '=', Auth::user()->id)
+            ->where('date', '=', $date)->with('classes', 'activities', 'sports');
         $sports = $schedule->sports;
         $classes = $schedule->classes;
         $activities = $schedule->activities;

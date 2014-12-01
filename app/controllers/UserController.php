@@ -14,7 +14,7 @@ class UserController extends BaseController
      * the data is valid, create the user and flash a success message.
      * Otherwise return the errors.
      */
-    public function postCreate()
+    public function postRegister()
     {
         $input = Input::all();
         $rules = array(

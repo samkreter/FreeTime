@@ -9,7 +9,16 @@ class UserTest extends TestCase {
 
     public function testCreateUserTrue()
     {
-        $this->newUser();
+        Artisan::call('migrate:refresh');
+        $input = array(
+            'first_name'    => 'kyle',
+            'last_name'     => 'mccarthy',
+            'username'      => 'kyle',
+            'password'      => 'testcase'
+        );
+        $this->call('POST', '/register', $input);
+        $this->assertRedirectedTo('home');
+        $this->assertSessionHas('success');
     }
 
     public function testCreateUserInvalidUsername()
@@ -21,7 +30,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
-        $this->assertRedirectedTo('register');
+        $this->assertRedirectedTo('login');
         $this->assertSessionHasErrors();
     }
 
@@ -35,7 +44,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
-        $this->assertRedirectedTo('register');
+        $this->assertRedirectedTo('login');
         $this->assertSessionHasErrors(array('first_name'));
     }
 
@@ -49,7 +58,7 @@ class UserTest extends TestCase {
             'password'      => 'testcase'
         );
         $this->call('POST', '/register', $input);
-        $this->assertRedirectedTo('register');
+        $this->assertRedirectedTo('login');
         $this->assertSessionHasErrors(array('last_name'));
     }
 
@@ -63,7 +72,7 @@ class UserTest extends TestCase {
             'password'      => 'test'
         );
         $this->call('POST', '/register', $input);
-        $this->assertRedirectedTo('register');
+        $this->assertRedirectedTo('login');
         $this->assertSessionHasErrors(array('password'));
     }
 
@@ -87,7 +96,7 @@ class UserTest extends TestCase {
             'password'  => 'badpassword',
         );
         $this->call('POST', '/login', $input);
-        $this->assertSessionHasErrors();
+        $this->assertSessionHas('loginError');
         $this->assertRedirectedTo('login');
     }
 }
