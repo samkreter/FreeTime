@@ -10,8 +10,13 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
+        Artisan::call('migrate:refresh');
 
-		//$this->call('DayTableSeeder');
+		$this->call('UserSeeder');
+        $this->call('ScheduleSeeder');
+        $this->call('ActivitySeeder');
+        $this->call('SportSeeder');
+        $this->call('ClassSeeder');
 	}
 
 }
