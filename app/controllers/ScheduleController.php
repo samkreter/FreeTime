@@ -47,9 +47,6 @@ class ScheduleController extends BaseController
         $schedule = Schedule::where('user_id', '=', Auth::user()->id)
             ->where('date', '=', $date)->with('classes', 'activities', 'sports')
             ->firstOrFail();
-        $sports = $schedule->sports;
-        $classes = $schedule->classes;
-        $activities = $schedule->activities;
         return Response::json(array(
             'schedule'      => $schedule,
         ));
