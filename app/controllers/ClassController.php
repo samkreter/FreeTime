@@ -32,7 +32,7 @@ class ClassController extends BaseController
      * @param $classId
      * @return mixed
      */
-    public function postAdd($scheduleId, $classId)
+    public function getAdd($scheduleId, $classId)
     {
         $schedule = Schedule::findOrFail($scheduleId);
         if ($schedule->user_id !== Auth::user()->id) {

@@ -33,7 +33,7 @@ class ActivityController extends BaseController
      * @param $activityId
      * @return mixed
      */
-    public function postAdd($scheduleId, $activityId)
+    public function getAdd($scheduleId, $activityId)
     {
         $schedule = Schedule::findOrFail($scheduleId);
         if ($schedule->user_id !== Auth::user()->id) {

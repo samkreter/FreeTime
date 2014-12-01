@@ -64,7 +64,6 @@
     <script src="js/fullcalendar.min.js"></script>
 
     <script>
-        var scheduleId = null;
         var $this = $('#calendar');
         $this.fullCalendar({
             header: {
@@ -83,9 +82,18 @@
                 color: 'yellow',   // a non-ajax option
                 textColor: 'black',
                 success: function(data) {
-                    scheduleId = data[0].title;
+                    $("body").attr('attr-schedule-id', data[0].title);
                 }
             }
+        });
+        $(window).load(function () {
+            $('.attach-item').click(function() {
+                var url = $(this).attr('attr-url');
+                var id = $(this).attr('attr-id');
+                var scheduleId = $('body').attr('attr-schedule-id');
+                var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id;
+                $.get(fullUrl);
+            });
         });
     </script>
 
