@@ -332,37 +332,47 @@
             </div>
         </div>
 
-        <!-- Scheduling Modal 3 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
+    <!-- Scheduling Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                            <div class="modal-body">
-                              <div class="row">
-                                <div class="col-lg-4">
-                                  <h2>Classes</h2>
-                                  <?php  ?>
-                                </div>
-                                <div class="col-lg-4">
-                                  <h2>Sports</h2>
-                                  <?php  ?>
-                                </div>
-                                <div class="col-lg-4">
-                                  <h2>Activities</h2>
-                                  <?php  ?>
-                                </div>
-                              </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <h3>Click what you want to add</h3>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h2>Classes</h2>
+                                <?php foreach($classes as $class){
+                                    echo "<h4><a href=''>$class->title - $class->instructor</a></h4>";
+                                } ?>
                             </div>
+                            <div class="col-lg-4">
+                                <h2>Sports</h2>
+                                <?php foreach($sports as $sport){
+                                    echo "<h4><a href=''>$sport->name - $sport->location</a><h4>";
+                                }
+                                ?>
+                            </div>
+                            <div class="col-lg-4">
+                                <h2>Activities</h2>
+                                <?php foreach($activities as $activity){
+                                    echo "<h4><a href='#'>$activity->name - $activity->location</a></h4>";
+                                }
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>​
+
 
 
 
