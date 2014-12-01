@@ -76,7 +76,7 @@
     header: {
     left: 'prev,next today',
     center: 'title',
-    right: 'agendaWeek,agendaDay'
+    right: 'agendaDay'
     },
     defaultView: 'agendaDay',
     editable: true,

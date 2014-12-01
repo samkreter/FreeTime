@@ -22,9 +22,9 @@ class HomeController extends BaseController
 			'title' => 'All Day Event sam',
 			'start' => '2014-11-30');
 
-		Log::error("sonthing went wrong");
+		//Log::error("sonthing went wrong");
 
-		return Response::json($event);
+		return Response::json((object)$event);
 	}
 
 }
