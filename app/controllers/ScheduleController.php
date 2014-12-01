@@ -44,11 +44,40 @@ class ScheduleController extends BaseController
     {
         // todo :: do we want anyone to be able to view someones schedule or just the user??
         $date = date('m-d-Y', Input::get('start'));
+        $calendarFormat = date('Y-m-d', Input::get('start')) . "T";
         $schedule = Schedule::where('user_id', '=', Auth::user()->id)
             ->where('date', '=', $date)->with('classes', 'activities', 'sports')
             ->firstOrFail();
-        return Response::json(array(
-            'schedule'      => $schedule,
-        ));
+        // modify the data to make it displayable with the plugin
+        $events = array();
+        // add activities
+        foreach ($schedule->activities as $activity) {
+            array_push($events, array(
+                'title' => $activity->name,
+                'start' => $calendarFormat . $activity->start,
+                'end'   => $calendarFormat . $activity->end,
+                'allDay' => false,
+            ));
+        }
+        // add classes
+        foreach ($schedule->classes as $class) {
+            array_push($events, array(
+                'title' => $class->title,
+                'start' => $calendarFormat . $class->start,
+                'end'   => $calendarFormat . $class->end,
+                'allDay' => false,
+            ));
+        }
+        // add sports
+        foreach ($schedule->sports as $sport) {
+            array_push($events, array(
+                'title' => $sport->name,
+                'start' => $calendarFormat . $sport->start,
+                'end'   => $calendarFormat . $sport->end,
+                'allDay' => false,
+            ));
+        }
+
+        return Response::json($events);
     }
 }

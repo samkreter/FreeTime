@@ -52,7 +52,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script>
+    <!--<script src="js/classie.js"></script>-->
     <script src="js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
@@ -64,12 +64,6 @@
     <script src="js/fullcalendar.min.js"></script>
 
     <script>
-        var date = new Date();
-        var d = date.getDate();
-        var m = date.getMonth() + 1;
-        var y = date.getFullYear();
-
-
         $('#calendar').fullCalendar({
             header: {
                 left: 'prev,next today',
