@@ -65,13 +65,14 @@ return array(
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => 'localhost',
+			'host'     => getenv('OPENSHIFT_POSTGRESQL_DB_HOST'),
 			'database' => 'freetime',
-			'username' => 'freetime',
-			'password' => 'freetime',
+			'username' => 'admincq2da2u',
+			'password' => 'Yh188i1B5DXr',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
+            'port'     => getenv('OPENSHIFT_POSTGRESQL_DB_PORT'),
 		),
 
 		'sqlsrv' => array(
