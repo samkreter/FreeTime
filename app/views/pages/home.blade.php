@@ -389,17 +389,17 @@
           var currencies =
             <?php
             echo"[";
-            //populate the class autocomplete
-            foreach($classes as $class){
-                echo "{ value: '$class->title  $class->instructor',data: { category: 'Class',attrUrl:'classes', attrId:'$class->id' } },\n";
+            //populate the actiity autocomplete
+            foreach($activities as $activity){
+                echo "{ value: '$activity->name  $activity->location',data: { category: 'Activity',attrUrl:'activities', attrId:'$activity->id' } },\n";
             }
             //populate the sports autocomplete
             foreach($sports as $sport){
                 echo "{ value: '$sport->name  $sport->location',data: { category: 'Sport',attrUrl:'sports', attrId:'$sport->id' } },\n";
             }
-            //populate the actiity autocomplete
-            foreach($activities as $activity){
-                echo "{ value: '$activity->name  $activity->location',data: { category: 'Activity',attrUrl:'activities', attrId:'$activity->id' } },\n";
+            //populate the class autocomplete
+            foreach($classes as $class){
+                echo "{ value: '$class->title  $class->instructor',data: { category: 'Class',attrUrl:'classes', attrId:'$class->id' } },\n";
             }
             echo"];";
             ?>
