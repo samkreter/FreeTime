@@ -16,6 +16,14 @@
               position:relative;
               top:-61px;
           }
+
+          .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+          .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+          .autocomplete-no-suggestion { padding: 2px 5px;}
+          .autocomplete-selected { background: #F0F0F0; }
+          .autocomplete-suggestions strong { font-weight: bold; color: #000; }
+          .autocomplete-group { padding: 2px 5px; }
+          .autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
         </style>
 
         <!-- Navigation -->
@@ -195,12 +203,12 @@
                                                   </div>
                                                   <div class="form-group col-md-6">
                                                       <label>Start Time</label>
-                                                      <input type="time" class="form-control" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Class Start Time.">
+                                                      <input id="timeInput" type="time" class="form-control timeInput" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Class Start Time.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group col-md-6">
                                                       <label>End Time *</label>
-                                                      <input type="time" class="form-control" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Class End Time.">
+                                                      <input type="time" class="form-control timeInput" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Class End Time.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
                                                   <div class="form-group">
@@ -245,12 +253,12 @@
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Start Time</label>
-                                                        <input type="time" class="form-control" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Sport's Start Time.">
+                                                        <input type="time" class="form-control timeInput" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Sport's Start Time.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>End Time *</label>
-                                                        <input type="time" class="form-control" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Sport's End Time.">
+                                                        <input type="time" class="form-control timeInput" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Sport's End Time.">
                                                         <p class="help-block text-danger"></p>
                                                     </div>
                                                     <div class="form-group">
@@ -295,12 +303,12 @@
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>Start Time</label>
-                                                    <input type="time" class="form-control" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Activity's Start Time.">
+                                                    <input type="time" class="form-control timeInput" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Activity's Start Time.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>End Time *</label>
-                                                    <input type="time" class="form-control" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Activity's End Time.">
+                                                    <input type="time" class="form-control timeInput" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Activity's End Time.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group">
@@ -345,7 +353,10 @@
                 <div class="row">
                     <h3>Click what you want to add</h3>
                     <div class="modal-body">
-                        <div class="row">
+                        <div id="searchfield">
+                          <form><input type="text" placeholder="Seaarch Through the List"name="currency" class="form-control" id="autocomplete"></form>
+                        </div><!-- @end #searchfield -->
+                        <div class="row .filterContent">
                             <div class="col-lg-4">
                                 <h2>Classes</h2>
                                 <?php foreach($classes as $class){
@@ -373,5 +384,30 @@
         </div>
     </div>​
 
+    <script>
+
+          var currencies =
+            <?php
+            echo"[";
+            //populate the class autocomplete
+            foreach($classes as $class){
+                echo "{ value: '$class->title  $class->instructor',data: { category: 'Class',attrUrl:'classes', attrId:'$class->id' } },\n";
+            }
+            //populate the sports autocomplete
+            foreach($sports as $sport){
+                echo "{ value: '$sport->name  $sport->location',data: { category: 'Sport',attrUrl:'sports', attrId:'$sport->id' } },\n";
+            }
+            //populate the actiity autocomplete
+            foreach($activities as $activity){
+                echo "{ value: '$activity->name  $activity->location',data: { category: 'Activity',attrUrl:'activities', attrId:'$activity->id' } },\n";
+            }
+            echo"];";
+            ?>
+
+
+
+
+
+    </script>
 
 @stop

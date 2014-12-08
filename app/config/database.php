@@ -63,16 +63,28 @@ return array(
 			'prefix'    => '',
 		),
 
+		//server connection info
+		// 'pgsql' => array(
+		// 	'driver'   => 'pgsql',
+		// 	'host'     => getenv('OPENSHIFT_POSTGRESQL_DB_HOST'),
+		// 	'database' => 'freetime',
+		// 	'username' => 'admincq2da2u',
+		// 	'password' => 'Yh188i1B5DXr',
+		// 	'charset'  => 'utf8',
+		// 	'prefix'   => '',
+		// 	'schema'   => 'public',
+    //         'port'     => getenv('OPENSHIFT_POSTGRESQL_DB_PORT'),
+		// ),
+
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => getenv('OPENSHIFT_POSTGRESQL_DB_HOST'),
+			'host'     => 'localhost',
 			'database' => 'freetime',
-			'username' => 'admincq2da2u',
-			'password' => 'Yh188i1B5DXr',
+			'username' => 'freetime',
+			'password' => 'freetime',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
-            'port'     => getenv('OPENSHIFT_POSTGRESQL_DB_PORT'),
 		),
 
 		'sqlsrv' => array(

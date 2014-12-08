@@ -58,6 +58,10 @@
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
 
+    <!-- autocomplete script -->
+   <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+   <script type="text/javascript" src="js/currency-autocomplete.js"></script>
+
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
@@ -85,8 +89,10 @@
                     $("body").attr('attr-schedule-id', data[0].title);
                 }
             }
-        });
+        })  ;
         $(window).load(function () {
+
+
             $('.attach-item').click(function() {
                 var url = $(this).attr('attr-url');
                 var id = $(this).attr('attr-id');
@@ -94,7 +100,19 @@
                 var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
                 $.get(fullUrl);
             });
-        });
+
+            $('#autocomplete').autocomplete({
+              lookup: currencies,
+              groupBy: 'category',
+              onSelect: function (suggestion) {
+                var url = suggestion.data.attrUrl;
+                var id = suggestion.data.attrId;
+                var scheduleId = $('body').attr('attr-schedule-id');
+                var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
+                $.get(fullUrl);
+                }
+            });
+          });
     </script>
 
 
