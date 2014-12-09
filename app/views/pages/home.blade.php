@@ -271,10 +271,6 @@
                                                       <input type="time" class="form-control timeInput" placeholder="End Time *" name="end" required data-validation-required-message="Please enter the Class End Time.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
-                                                  <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Room Number *" name="classRoomNumber" required data-validation-required-message="Please enter Class Room Number.">
-                                                      <p class="help-block text-danger"></p>
-                                                  </div>
                                                   <div class="col-lg-12 text-center">
                                                       <div id="success"></div>
                                                       <button type="submit" class="btn btn-xl">Add</button>
@@ -445,7 +441,7 @@
     </div>​
 
     <script>
-
+          //populate the autocomplete suggestions
           var currencies =
             <?php
             echo"[";

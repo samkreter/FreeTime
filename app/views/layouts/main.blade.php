@@ -46,8 +46,6 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
-    <!-- calendar JavaScript -->
-    <script src="js/calandar.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -62,39 +60,20 @@
 
     <!-- autocomplete script -->
    <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
-   <script type="text/javascript" src="js/currency-autocomplete.js"></script>
-
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+
+    <!-- calendar.js -->
     <script src="js/fullcalendar.min.js"></script>
+    <script src="js/calendar.js"></script>
 
     <script>
-        var $this = $('#calendar');
-        $this.fullCalendar({
-            header: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'agendaDay'
-            },
-            defaultView: 'agendaDay',
-            editable: true,
-            events: {
-                url: '/schedules',
-                type: 'GET',
-                error: function() {
-                    console.log('there are no events for this day');
-                },
-                color: 'yellow',   // a non-ajax option
-                textColor: 'black',
-                success: function(data) {
-                    $("body").attr('attr-schedule-id', data[0].title);
-                }
-            }
-        })  ;
+
         $(window).load(function () {
 
 
+            //send get request when user clicks on event to add
             $('.attach-item').click(function() {
                 var url = $(this).attr('attr-url');
                 var id = $(this).attr('attr-id');
@@ -103,6 +82,7 @@
                 $.get(fullUrl);
             });
 
+            //send the get request if user clicks from autocomplete suggestions
             $('#autocomplete').autocomplete({
               lookup: currencies,
               groupBy: 'category',
@@ -115,6 +95,7 @@
                 }
             });
           });
+
     </script>
 
 
