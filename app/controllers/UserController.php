@@ -32,7 +32,8 @@ class UserController extends BaseController
                 return Redirect::to('home')->with('success', 'Account created!');
             }
         }
-        return Redirect::to('login')->withErrors($validator)
+        $messages = $validator->messages();
+        return Redirect::to('login')->withErrors($messages)
           ->withInput(Input::except('password'));
     }
 
@@ -54,7 +55,7 @@ class UserController extends BaseController
             'password' => Input::get('password')))) {
             return Redirect::intended('home');
         }
-        return Redirect::to('/login')->with('loginError', 'Invalid username/password combination!');
+        return Redirect::to('login')->with('login', "Invalid username/password combination!");
     }
 
     /**

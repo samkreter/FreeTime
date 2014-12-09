@@ -29,20 +29,26 @@
 
             <div class="container">
                 <div class="row">
-                <?php if(isset($loginError)): ?>
-                 <div class="alert alert-danger col-lg-6" role="alert"><?phpecho $loginError; ?></div>
-               <?php endif ?>
-               <?php if(isset($errors)): ?>
-                 <div class="alert alert-danger col-lg-6" role="alert"><?php foreach($errors as $error){echo $error;} ?></div>
-               <?php endif ?>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <h2 class="section-heading text-center">Log In Existing User</h2>
+                        <?php if(Session::has('login')): ?>
+                            <div class="alert alert-danger" role="alert"><?php echo Session::get('login'); ?></div>
+                        <?php endif ?>
                     </div>
 
                     <div class="col-lg-6">
                         <h2 class="section-heading text-center">Register New User</h2>
+                        <?php if(Session::has('errors')): ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php
+                                foreach ($errors->all() as $error) {
+                                    echo $error . '<br>';
+                                }
+                                ?>
+                            </div>
+                        <?php endif ?>
                     </div>
                 </div>
                 <div class="row">
@@ -75,13 +81,17 @@
                                           <input name="password" type="password" class="form-control" placeholder="Enter Password *" id="register-pass" required data-validation-required-message="Please enter your Password.">
                                           <p class="help-block text-danger"></p>
                                       </div>
-                                      <div class="form-group col-lg-6">
-                                          <input name="first_name" type="text" class="form-control" placeholder="Enter Your First Name *" id="fname" required data-validation-required-message="Please re-enter your Password.">
-                                          <p class="help-block text-danger"></p>
-                                      </div>
-                                      <div class="form-group col-lg-6">
-                                          <input name="last_name" type="text" class="form-control" placeholder="Enter Your Last Name *" id="lname" required data-validation-required-message="Please re-enter your Password.">
-                                          <p class="help-block text-danger"></p>
+                                      <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <input name="first_name" type="text" class="form-control" placeholder="Enter Your First Name *" id="fname" required data-validation-required-message="Please re-enter your Password.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input name="last_name" type="text" class="form-control" placeholder="Enter Your Last Name *" id="lname" required data-validation-required-message="Please re-enter your Password.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
                                       </div>
                                       <div class="col-lg-12 text-center">
                                           <div id="success"></div>

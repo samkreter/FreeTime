@@ -3,14 +3,13 @@
 Route::get('/', array('uses' => 'HomeController@getIndex'));
 
 // registration
-Route::get('register', array('uses' => 'UserController@getRegister'));
-Route::post('register', array('uses' => 'UserController@postRegister'));
+Route::get('/register', array('uses' => 'UserController@getRegister'));
+Route::post('/register', array('uses' => 'UserController@postRegister'));
 
 // user authentication
-Route::get('login', array('uses' => 'UserController@getLogin'));
-Route::post('login', array('uses' => 'UserController@postLogin'));
-
-Route::get('logout', array('uses' => 'UserController@getLogout'));
+Route::get('/login', array('uses' => 'UserController@getLogin'));
+Route::post('/login', array('uses' => 'UserController@postLogin'));
+Route::get('/logout', array('uses' => 'UserController@getLogout'));
 
 Route::post('/events',array('uses'=> 'HomeController@getEvents'));
 
