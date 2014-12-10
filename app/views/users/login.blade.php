@@ -15,7 +15,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">FreeTime</a>
+                    <a class="navbar-brand page-scroll" href="/">FreeTime</a>
                 </div>
 
 

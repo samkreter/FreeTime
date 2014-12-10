@@ -199,11 +199,11 @@
                                                       <input type="text" class="form-control" placeholder="Class Instructor *" name="instructor" required data-validation-required-message="Please enter Class Instructor.">
                                                       <p class="help-block text-danger"></p>
                                                   </div>
-                                                  <div class="form-group">
+                                                 <!--  <div class="form-group">
                                                     <label>Date *</label>
                                                     <input type="date" class="form-control" placeholder="Sport Date *" name="sportDate" required data-validation-required-message="Please enter the Sport's Date.">
                                                     <p class="help-block text-danger"></p>
-                                                  </div>
+                                                  </div> -->
                                                   <div class="form-group col-md-6">
                                                       <label>Start Time</label>
                                                       <input id="timeInput" type="time" class="form-control timeInput" placeholder="Start Time *" name="start" required data-validation-required-message="Please enter the Class Start Time.">

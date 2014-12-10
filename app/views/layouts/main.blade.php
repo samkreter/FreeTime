@@ -89,9 +89,9 @@
               groupBy: 'category',
               onSelect: function (suggestion) {
                 var url = suggestion.data.attrUrl;
+                var id = suggestion.data.attrId; 
                 var scheduleId = $('body').attr('attr-schedule-id');
                 console.log("schedules = "+scheduleId+" id="+id+"url-"+url);
-                //if (scheduleId === undefined) ##don't know what this if statment is for###### 
                 var fullUrl = '/schedules/' + scheduleId + '/' + url + '/' + id + '/add';
                 console.log("Full url "+fullUrl);
                 $.get(fullUrl);
