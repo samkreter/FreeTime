@@ -3,13 +3,37 @@
 class ScheduleController extends BaseController
 {
     /**
-     * Get all of the schedules for the logged in user.
+     * Get all of the schedules for the day.
      * @return mixed
      */
-    public function getAll()
+    public function getToday()
     {
-        $schedules = Schedule::where('user_id', '=', Auth::user()->id)->get();
-        return Response::json($schedules);
+        $date = date('m-d-Y');
+        $schedules = Schedule::where('date', '=', $date)
+            ->with('classes', 'activities', 'sports')->get();
+        $events = array(
+            'classes' => array(),
+            'activities' => array(),
+            'sports'    => array(),
+        );
+        // loop through the schedules for today
+        foreach ($schedules as $schedule) {
+            // get all the classes and add them as an event
+            foreach($schedule->classes as $class) {
+                array_push($events['classes'], $class->toArray());
+            }
+            // get all activities
+            foreach($schedule->activities as $activity) {
+                array_push($events['activities'], $activity->toArray());
+
+            }
+            // get all the sports
+            foreach($schedule->sports as $sport) {
+                array_push($events['sports'], $sport->toArray());
+
+            }
+        }
+        return Response::json($events);
     }
 
     /**
