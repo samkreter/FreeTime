@@ -47,7 +47,7 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a href="#portfolioModal1" class="page-scroll top-nav-menu" data-toggle="modal"><b>I Got FreeTime!</b></a>
+                            <a id="freetimeModal"href="#portfolioModal1" class="page-scroll top-nav-menu" data-toggle="modal"><b>I Got FreeTime!</b></a>
                         </li>
                         <li>
                             <a  class="filler">     </a>
@@ -138,7 +138,7 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                               <h2>Find Others Now!</h2>
-                                <table class="bordered">
+                                <table id="freeTimeTable" class="bordered">
                                     <thead>
 
                                     <tr>
@@ -151,63 +151,6 @@
                                         <th>Needed Equipment</th>
                                     </tr>
                                     </thead>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>The Shawshank Redemption</td>
-
-                                        <td>1994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>The Godfather</td>
-                                        <td>1972</td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>3</td>
-                                        <td>The Godfather: Part II</td>
-                                        <td>1974</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>The Good, the Bad and the Ugly</td>
-                                        <td>1966</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Pulp Fiction</td>
-                                        <td>1994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>12 Angry Men</td>
-
-                                        <td>1957</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Schindler's List</td>
-                                        <td>1993</td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>8</td>
-                                        <td>One Flew Over the Cuckoo's Nest</td>
-                                        <td>1975</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>The Dark Knight</td>
-
-                                        <td>2008</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>The Lord of the Rings: The Return of the King</td>
-                                        <td>2003</td>
-                                    </tr>
-
                                 </table>
 
                             </div>
@@ -461,7 +404,7 @@
             ?>
 
 
-
+        
 
 
     </script>

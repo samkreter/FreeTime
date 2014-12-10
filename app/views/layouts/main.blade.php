@@ -97,6 +97,30 @@
                 window.location.reload()
                 }
             });
+
+            function createTable(element, index, array) {
+                var sups;
+                if(element.equipment){
+                    sups = element.equipment;
+                }
+                else if(element.supplies){
+                    sups = element.supplies;
+                }
+                else{
+                    sups = "None";
+                }
+                $('#freeTimeTable')
+                .append("<tr><td>"+element.start+"</td><td>"+element.end+"</td><td>"+element.name+"</td><td>"+element.location+"</td><td>"+element.min_players+"</td><td>"+element.max_players+"</td><td>"+sups+"</td>");
+            }
+
+            //update the "I got freetime tab"
+            $('#freetimeModal').click(function(){
+                $.get( "/schedules/all", function( data ) {
+                    console.log(data.sports[0])
+                    data.sports.forEach(createTable);
+                    data.activities.forEach(createTable);
+                });
+            });
           });
 
     </script>
