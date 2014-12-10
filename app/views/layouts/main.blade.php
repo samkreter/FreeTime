@@ -80,6 +80,7 @@
                 var scheduleId = $('body').attr('attr-schedule-id');
                 var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
                 $.get(fullUrl);
+                window.location.reload()
             });
 
             //send the get request if user clicks from autocomplete suggestions
@@ -93,6 +94,7 @@
                 if (scheduleId === undefined)
                 var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
                 $.get(fullUrl);
+                window.location.reload()
                 }
             });
           });
