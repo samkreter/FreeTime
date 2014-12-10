@@ -13,41 +13,24 @@ class ScheduleController extends BaseController
     }
 
     /**
-     * Create the schedule for a user.  The schedule needs to have a date associated with it,
-     * so validate the POST data.  Set the user_id to the logged in user.
-     * @return mixed
-     */
-    public function postCreate()
-    {
-        $input = Input::all();
-        $rules = array(
-            'date'  => 'required|date',
-        );
-        $validator = Validator::make($input, $rules);
-        if ($validator->passes()) {
-            $schedule = new Schedule(Input::all());
-            $schedule->user_id = Auth::user()->id;
-            if ($schedule->save()) {
-                return Redirect::to('schedules/view/' . $schedule->id)
-                    ->with('success', 'New schedule create.');
-            }
-        }
-        return Redirect::to('schedules/new')->withErrors($validator);
-    }
-
-    /**
      * Get the schedule resource from the DB along with it's relations.  Flash the
      * data to the view.
      * @return mixed
      */
     public function getView()
     {
-        // todo :: do we want anyone to be able to view someones schedule or just the user??
         $date = date('m-d-Y', Input::get('start'));
         $calendarFormat = date('Y-m-d', Input::get('start')) . "T";
         $schedule = Schedule::where('user_id', '=', Auth::user()->id)
             ->where('date', '=', $date)->with('classes', 'activities', 'sports')
-            ->firstOrFail();
+            ->first();
+        // if the schedule for the desired day does not exits just create one
+        if (count($schedule) < 1) {
+            $schedule = new Schedule();
+            $schedule->date = $date;
+            $schedule->user_id = Auth::user()->id;
+            $schedule->save();
+        }
         // modify the data to make it displayable with the plugin
         $events = array(array('title' => $schedule->id));
         // add activities

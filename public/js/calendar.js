@@ -11,7 +11,6 @@ $this.fullCalendar({
         url: '/schedules',
         type: 'GET',
         error: function() {
-            console.log('there are no events for this day');
         },
         color: 'yellow',   // a non-ajax option
         textColor: 'black',
@@ -19,4 +18,4 @@ $this.fullCalendar({
             $("body").attr('attr-schedule-id', data[0].title);
         }
     }
-})  ;
+});

@@ -90,6 +90,7 @@
                 var url = suggestion.data.attrUrl;
                 var id = suggestion.data.attrId;
                 var scheduleId = $('body').attr('attr-schedule-id');
+                if (scheduleId === undefined)
                 var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
                 $.get(fullUrl);
                 }

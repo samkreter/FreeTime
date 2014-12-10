@@ -26,7 +26,6 @@ Route::group(array('before' => 'auth'), function()
     // schedules
     Route::get('/schedules/all', array('uses' => 'ScheduleController@getAll'));
     Route::get('/schedules', array('uses' => 'ScheduleController@getView'));
-    Route::post('/schedules/new', array('uses' => 'ScheduleController@postCreate'));
 
     // activities
     Route::get('/schedules/activities/new', array('uses' => 'ActivityController@getCreate'));
