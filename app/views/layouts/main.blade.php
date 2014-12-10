@@ -89,15 +89,19 @@
               groupBy: 'category',
               onSelect: function (suggestion) {
                 var url = suggestion.data.attrUrl;
-                var id = suggestion.data.attrId;
                 var scheduleId = $('body').attr('attr-schedule-id');
-                if (scheduleId === undefined)
-                var fullUrl = '/schedules/' + scheduleId + "/" + url + "/" + id + "/add";
+                console.log("schedules = "+scheduleId+" id="+id+"url-"+url);
+                //if (scheduleId === undefined) ##don't know what this is for 
+                var fullUrl = '/schedules/' + scheduleId + '/' + url + '/' + id + '/add';
+                console.log("Full url "+fullUrl);
                 $.get(fullUrl);
                 window.location.reload()
                 }
             });
 
+
+
+            //function for updating the freetime table
             function createTable(element, index, array) {
                 var sups;
                 if(element.equipment){
@@ -112,7 +116,6 @@
                 $('#freeTimeTable')
                 .append("<tr><td>"+element.start+"</td><td>"+element.end+"</td><td>"+element.name+"</td><td>"+element.location+"</td><td>"+element.min_players+"</td><td>"+element.max_players+"</td><td>"+sups+"</td>");
             }
-
             //update the "I got freetime tab"
             $('#freetimeModal').click(function(){
                 $.get( "/schedules/all", function( data ) {
