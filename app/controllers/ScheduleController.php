@@ -8,9 +8,11 @@ class ScheduleController extends BaseController
      */
     public function getToday()
     {
-        $date = date('m-d-Y');
+        $date = date('Y-m-d');
+        Log::info("$date\n"); //################################
         $schedules = Schedule::where('date', '=', $date)
             ->with('classes', 'activities', 'sports')->get();
+        Log::info($schedules); //#########################
         $events = array(
             'classes' => array(),
             'activities' => array(),
